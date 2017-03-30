@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>页面布局有关CSS属性</title>
+	</head>
+	<style type="text/css">
+	div{
+		width: 100px;
+		height: 100px;
+		margin-top: 9px;
+	}
+		#one{
+			background: red;
+			float: left;
+			/*margin-right: 5px;*/
+			
+		}
+		#tow{
+			background: gray;
+			/*漂浮  不换行
+			 在同一层：浏览器有空间则显示没有自动换行
+			 * */
+			float: left;
+			/*清除:左边（换行）*/
+			/*clear: both;
+			clear: left;*/
+		}
+			#three{
+			background: green;
+			height: 300px;
+			float: left;
+			/*不能用(br/)换行*/
+		}
+		
+		
+	</style>
+	<body>
+		<div id="one">
+			
+		</div>
+		<div id="tow">
+			
+		</div>
+		
+		<div id="three">
+			
+		</div>
+		
+		
+	</body>
+</html>

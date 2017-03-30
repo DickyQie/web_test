@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>CSS+DIV属性</title>
+	</head>
+	<style type="text/css">
+.mn_menu li{float:left;position:relative;}
+.mn_menu li .hot{position:absolute;top:-1px;right:0px;width:29px;height:17px;overflow:hidden;background:url('http://res.ckimg.com/sites/www/v2/images/index/hot.gif') no-repeat 0 0;}
+.mn_menu li a{display:block;padding:0 20px;margin:0 1px 0 0;font:700 14px/40px 'arial';color:#fff;}
+.mn_menu li a.here,
+.mn_menu li a:hover{border-top:#666 1px solid;line-height:38px;height:39px;color:#1CB177;background-color:#f0f0f0;}	
+
+li{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    /*
+     list-style-type的其它属性：
+none不使用项目符号
+disc实心圆，默认值
+circle空心圆
+square实心方块
+decimal阿拉伯数字
+lower-roman小写罗马数字
+upper-roman大写罗马数字
+lower-alpha小写英文字母
+upper-alpha大写英文字母*/
+    list-style-type:none;
+}
+
+a:link,a:visited{
+ text-decoration:none;  /*超链接无下划线*/
+}
+a:hover{
+ text-decoration:underline;  /*鼠标放上去有下划线*/
+}
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    clear: both;
+    *zoom: 1;
+}
+.top{background: green;width: 100%;height: 150px;}
+.top1{background: #1CB177;width: 95%;height: 88px;margin: 0 auto;}
+.top2{background: gray;width: 95%;margin: 0 auto;margin-top: -15px;}	
+	</style>
+	<body>
+		<div class="top">
+			<div class="top1"></div>
+				<div class="top2">
+		
+				 	<ul class="mn_menu fl clearfix">
+                        <li><a href="/" class="">首页</a></li>
+                        <li>
+							<a href="http://zt.chuanke.com/2015/it" target="_blank">IT精英</a>
+						</li>
+						<li>
+							<a href="http://zt.chuanke.com/2015/kaoshikaoji" target="_blank">考试达人</a>
+						</li>
+						<li>
+							<a href="http://zt.chuanke.com/2015/zhichang" target="_blank">人在职场</a>
+						</li>
+                        <li><a href="/k12" target="_blank" class="">中小学</a></li>
+                        <li>
+                                <a href="http://www.chuanke.com/course/__prelectstarttime_asc___2.html">今日直播</a>
+                                <i class="hot"></i>
+                        </li>
+                        <li><a href="http://zt.chuanke.com/" target="_blank">精品课</a></li>
+                	</ul>
+              </div>
+           </div>
+	</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>颜色,字体和border样式</title>
+	</head>
+	<style type="text/css">
+		body{background: green;background-image:url(../img/weixin.png);
+		/*指定对象的背景图像是随对象内容滚动还是固定的。*/background-attachment: fixed;}
+		/*分为图片透明和不透明 ， 背景图片：background-image:url(../img/intents.png)
+		 *背景位置：background-position: 100px 200px;*/
+		h1{background-color:#0000FF;background-image:url(../img/intents.png) ;
+			background-repeat: repeat-y;/*设置图片显示样式垂直..*/
+			background-position: 100px 200px;/*top left...*/
+		}
+		h2{
+			/*所有属性随意写*/
+			background: red url(../img/weixin.png) no-repeat fixed center;
+		}
+		p{
+			font-family: "maiandra gd";
+			font-style: oblique;/*斜体*/
+			font-variant: small-caps;/*字母大写*/
+			/*font-bold:bold:加粗(淘汰)
+			 normal：正常的字体。相当于number为400
+			bold：粗体。相当于number为700。
+			bolder：特粗体。也相当于strong和b对象的作用
+			lighter：细体(100-900)
+			 * */
+			font:bold;
+			font-weight: 900;
+		}
+		h3{
+			/*double:双线轮廓*/
+			border-left: 1px double blue;
+			border-top: 2px solid red;
+			border-right: 3px solid gold;
+			border-bottom: 4px solid green;
+			border-style: groove;
+		}
+	</style>
+	
+	<body>
+		<h1 style="height: 189px;">dd</h1>
+		<h2 style="height: 159px;">s</h2>
+		<h3 style="height: 35px;">pp</h3>
+		<p>sdafhsdfsss</p>
+		ddddddddddddddd<br>
+		ddddddddddddddd<br>
+		ddddddddddddddd<br>
+		
+		
+		
+	</body>
+</html>

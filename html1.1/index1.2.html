@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>CSS样式选择器</title>
+		
+	</head>
+	
+	<style type="text/css">	
+/*1:html/元素选择器 
+ 	*代表所有, p{}代表所有p, *{font-size1:cm;color:red} 
+ */
+ h1{font-size:22px;color:#33FF00;}
+ p{font-size: 22px;}
+/* 2:id选择器  id式唯一的  优先级高于HTML选择器*/
+#one{font-size:23px;color:#00FF00;width:100%;height:31px;}
+#b{border:3px solid #CCCCCC;  height:55px; line-height: 55px; margin:2px auto;}		
+/*3:类选择器+层叠样式 */	
+p.p1{color: #0000FF;}	
+p.p2{color: #FF0000;}
+.p3{font-family: "微软雅黑";}	
+.p4{font-size: 16px;}	
+/*4：关联选择器*/
+div p{color: #0000FF;font-size: 19px;} 
+div strong{font-family: "微软雅黑";} 
+/*5:组合选择器 用逗号隔开*/
+h2,.hl2,#hl1{color:green;}
+/*6:伪元素选择器  CSS2只有a和p有*/
+a{color: red;}
+a:link{color: green;font-size: 19px;}/*为访问*/
+a:visited{color: #0000FF;}/*以访问*/
+a:hover{color: red;font-family: "微软雅黑"}/*鼠标在上面*/
+a:active{font-size：1cm;color: #FFFF00;}/*激活链接*/
+div b p{color: red;}
+div b p:first-letter{font-size: 1cm;}/*选择每个 <p> 元素的首字母*/
+div b p:first-line{font-size:2cm;}/*除第一个字外的其他字*/
+	 </style> 	
+	<body>
+
+	<!--1 -->
+	<p style="font-size:26px;color:red;border:1ps solid blue">CtrL+Shift+Tab----切换</p>
+	<p >CtrL+Shift+Tab----切换</p>
+	<h1>这是H1标记</h1>
+	<h1>这是H2标记</h1>
+	
+	<!--2 -->
+	<div id="one">div2盛世</div>
+	<div id="b">div3</div>
+	<!--3-->
+	<p class="p1">H1</p>
+	<p class="p2">H1</p>
+	<p class="p2 p3 p4">H1</p>
+	<p>H1</p>
+	<!--4-->
+	<div >
+			<strong><p>雷人</p></strong>
+	</div>
+	<!--5-->
+		<h2>这是H3标记</h2>
+		<h3 class="hl2">这是H4标记</h3>
+		<h4 id="hl1">这是H5标记</h4>
+	<!--6：伪元素 <a>包含正常，访问，选中，光标等状态</a>-->	
+		<a href="index1.1.html">1</a><br />
+		<a href="index1.1.html">2</a><br />
+		<a href="index1.1.html">3</a>
+		
+		<div ><b>
+			<p>雷人对对</p>
+		</b></div>
+	</body>
+</html>

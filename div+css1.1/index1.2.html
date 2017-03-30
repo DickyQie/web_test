@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>CSS+DIV属性</title>
+	</head>
+	<style type="text/css">
+		#one{
+			position: absolute;/*绝对定位*/
+			width: 200px;height: 200px;background: yellow;
+			top: 50px;left: 30px;
+			z-index: 1;
+		}
+		#tow{
+			/*漂浮广告才用*/
+			position: absolute;/*绝对定位*/
+			width: 200px;height: 200px;background: green;
+			top: 70px;left: 210px;
+			z-index: 2;/*层的覆盖关系值越高越在上面*/
+		}
+		#three{
+			position: relative;/*相对自己定位相对于父div*/
+			top: 10px;left: -10px;
+			width: 100px;height: 100px;background: red;
+			z-index: 10;
+			
+		}
+		#four{
+			
+			position: fixed;/*固定定位相对于父div 如广告在上面一样*/
+			left: 30px;
+			width: 100px;height: 100px;background: #F0F;
+			z-index: 11;
+		}
+	</style>
+	<body>
+		<div id="four">
+			这是5
+		</div>
+		这是1 <br />这是1 <br />这是1 <br />这是1 <br />这是1 <br />
+		这是1 <br />这是1 <br />这是1 <br />这是1 <br />这是1 <br />
+		这是1 <br />这是1 <br />这是1 <br />这是1 <br />这是1 <br />
+		这是1 <br />这是1 <br />这是1 <br />这是1 <br />这是1 <br />
+		这是1 <br />这是1 <br />这是1 <br />这是1 <br />这是1 <br />
+		这是1 <br />这是1 <br />这是1 <br />这是1 <br />这是1 <br />
+		这是1 <br />这是1 <br />这是1 <br />这是1 <br />这是1 <br />
+		这是1 <br />这是1 <br />这是1 <br />这是1 <br />这是1 <br />
+		这是1 <br />这是1 <br />这是1 <br />这是1 <br />这是1 <br />
+		这是1 <br />这是1 <br />这是1 <br />这是1 <br />这是1 <br />
+		这是1 <br />这是1 <br />这是1 <br />这是1 <br />这是1 <br />
+		这是1 <br />这是1 <br />这是1 <br />这是1 <br />这是1 <br />
+		<div id="one">
+			这是2
+		</div>
+		<div id="tow">
+			这是3
+			<div id="three">
+			这是4
+		</div>
+		</div>
+	</body>
+</html>

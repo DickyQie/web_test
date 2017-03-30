@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>表单</title>
+	</head>
+	<body>
+		<table width="400px" border="1" align="center">
+			<caption>表单</caption>
+			<!--action:提交--提交服务路径   空表示当前界面
+				get:内容不影藏
+				post:隐藏
+				form中可以使用三种标签  input areatext select
+				accesskey:快捷键
+				tabindex:tab顺序
+			-->
+			<form action="" method="get">
+			<tr>
+				<th>输入框(<u>U</u>)</th>
+				<!--设置长度大小-->
+				<td><input accesskey="u" tabindex="1" name="name" size="29" value="输入Name" type="text"></td>
+			</tr>
+				<th>密码框(<u>P</u>)</th>
+				<td><input accesskey="p" tabindex="2" name="pwd"maxlength="6" type="password"></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center"><input name="dosubmit" type="submit" value="登录"></td>
+			</tr>
+			</tr>
+			<!--readonly的数据能提交
+				disabled:提示文字：且不能提交
+			-->
+				<td> <input type="text" disabled value="大发生的"></td>
+				<td><input type="text" readonly="readonly" value="不能输入"></td>
+			</tr>
+			</form>
+		</table>
+		
+	</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>盒子（区块居中和两三多等浮动布局）</title>
+	</head>
+	<style type="text/css">
+	body{
+		/*div==不管用  内容管用*/
+		text-align: center;
+	}
+		.one,.tow{
+			width: 307px;
+			height: 200px;
+			border: 1px solid green;
+			/*居中1*/
+			/*margin-left:auto ;
+			margin-right: auto;*/
+			/*居中2*/
+			margin: 0 auto;
+			text-align: center;
+		}/*浮动*/
+		#content{
+			width: 200px;
+			height: 100px;
+			background: gray;
+			float: left;
+		}
+		#barside{
+			width: 100px;
+			height: 50px;
+			background: red;
+			float: right;
+		}
+		#l1{
+			width: 100px;
+			height: 50px;
+			background: red;
+			float: left;
+		}
+		#l2{
+			margin-left: 2px;
+			width: 100px;
+			height: 50px;
+			background: gray;
+			float: left;
+		}
+		#l3{
+		width: 100px;
+			height: 50px;
+			background: green;
+			float: right;
+		}
+		.box{
+			width: 400px;
+			height: 400px;
+			background: red;
+		}
+		#p1{
+			width: 86px;
+			height: 85px;
+			background: green;
+			float: left;
+			margin-top: 10px;
+			margin-left: 10px;
+		}
+	</style>
+	
+	<body>
+		ss
+		<div class="one">
+		
+			<div id="content">
+				s
+			</div>
+			<div id="barside">
+				
+			</div>
+		</div>
+		<div class="tow">
+		
+			<div id="l1">
+			</div>
+			<div id="l2">
+				
+			</div>
+			<div id="l3">
+				
+			</div>
+		</div>
+		<!--多列浮动-->
+		<div class="box">
+			<div id="p1"></div>
+			<div id="p1"></div>
+			<div id="p1"></div>
+			<div id="p1"></div>
+			<div id="p1"></div>
+			<div id="p1"></div>
+			<div id="p1"></div>
+			<div id="p1"></div>
+			<div id="p1"></div>
+			<div id="p1"></div>
+				
+			
+		</div>
+	</body>
+</html>

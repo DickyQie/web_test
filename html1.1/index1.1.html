@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>HTML和CSS结合的几种方式样式</title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="../css/css1.1.css"/> 
+	<style type="text/css">
+		div{
+			widows: auto;
+			height: 2em;
+			background: red;
+		}
+	
+	</style>
+	<body>
+		<!--CSS：由选择符,属性，属性取值组成
+		CSS注释/*  */  注释中不能再写注释
+		相对长度单位：px,em，绝对cm，mm 
+		1em=16px
+		四个属性可在所有HTML标签使用id，name class,style
+		-->
+	<!--优先级;内联->外部
+		
+	-->
+		<!--1.内联样式表：解释在任意HTML标记中使用style.-->
+	<p style="font-size:1cm;color:red;border:1ps solid blue">Zhe 式一个段落	</p>
+	<!--2.嵌入样式表：使用HTML的<style>.将CSS嵌入到HTML中 -->
+	<div>
+		<p>sss</p>
+	</div>
+	<!-- 3.外部样式表：使用使用获取后缀的CSS文件专门定义样式，在将文件使用《link>标记(head中写)HTML中，
+		将CSS和这个HTML文件结合样式叠加式以最后一个为准；
+	-->
+	<h1>jjjj</h1>
+		
+	</body>
+</html>

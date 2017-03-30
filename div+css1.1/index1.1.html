@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>CSS+DIV+表格+盒子</title>
+	</head>
+	<style type="text/css">
+		span{
+			color: red;
+			font-weight: bold;
+		}
+		#box{
+			border: 1px solid gray;
+			width: 200px;height: 200px;
+			/*margin相同*/
+			/*四边都变上下 10px 20px左右*/
+			padding: 10px 20px;
+			/*四边都变上 10px 20px左右 30px下*/
+			padding: 10px 20px 30px;
+			/*上右下左*/
+			padding: 10px 20px 30px 40px;
+		}
+		#box1{
+			/*border和padding会影响
+			 * 火狐包含有：显示内容==300x300
+			 * 内边距  15
+			 * border：2px
+			 * 外边距：15
+			 * div显示==width=height：300+15+15+2
+			 * IE包含有：外面加的==300x300
+			 * 内边距  15
+			 * border：2px
+			 * 外边距：15
+			 * 300-内边距-padding的上-右-左
+			 * 下==相对与高度
+			 * 内容显示==width=：300-2-2-15-15-15
+			 * div显示300x300
+			 * 浏览器如何解决内容显示==!important
+			 */
+			width: 300px !important;/*IE的*/
+			width: 251px;/*火狐的*/
+			height: 300px !important;
+			height: 281;
+			border: 2px solid blue;
+			margin: 15px 15px;
+			padding: 15px 15px;
+			background: green;
+		}
+	</style>
+	<body>
+		<div>zheshi</div>
+		<div>zheshi</div>
+		<span>但萨福</span>
+		<span>但萨福</span>
+		<span>但萨福</span>
+		<span>但萨福</span>
+		
+		<div id="box">
+			<p>但萨福<p>
+				<p>但萨福<p>
+					<p>但萨福<p>
+		</div>
+		<!--IE  和火狐有差异(边框)-->
+		<div id="box1">
+			这是内容<br />
+			这是内容<br />
+			这是内容<br />
+			这是内容<br />
+		</div>
+	</body>
+</html>

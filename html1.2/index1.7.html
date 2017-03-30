@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>HTML框架结构尽量少使用主要用于后台</title>
+	</head>
+	
+		<frameset rows="10%,*">
+			<frame name="top"  src="top.html"/>
+			<frameset  cols="*,40%">
+				<frame name="left" src="left.html"/>
+				<frame name="main" src="main.html"/>
+			</frameset>
+			
+		</frameset>
+		<noframes>
+			你的浏览器不支持HTML框架分支
+		</noframes>
+	
+	
+</html>

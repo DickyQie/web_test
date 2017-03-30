@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#one1{
+			width: 100px;
+			background: gray;
+			text-align: center;/*设置盒子属性内容*/
+			/*设置上中下居中*/
+			padding: 50px 10px;/*设置显示位置*/
+			/*line-height: ;*/
+			/*换行便签 display: none;影藏*/
+			display: block;
+			
+		}
+		#tow1{
+			width: 100px;
+			background: green;
+			text-align: center;/*设置盒子属性内容*/
+			/*设置上中下居中*/
+			padding: 50px 10px;/*设置显示位置*/
+			
+		}
+		#one{
+			width: 200px;
+			background: gray;
+			text-align: center;/*设置盒子属性内容*/
+			/*设置上中下居中 高度随内容变化*/
+			padding: 50px 10px;/*设置显示位置*/
+			/*line-height: ;*/
+			/*换行便签*/
+		}
+		#tow{
+			width: 200px;
+			background: green;
+			text-align: center;/*设置盒子属性内容*/
+			/*设置上中下居中*/
+			line-height: 100px;
+			padding: 10px;
+			
+		}
+		/*
+		 visibility:DIV中的DIV==且套层
+		 * */
+		.ss{visibility: hidden;/*影藏区域还在*/}
+		/*overflow:超出部分隐藏*/
+		#three{
+			width: 200px;
+			height: 200px;
+			background: green;
+			text-align: center;/*设置盒子属性内容*/
+			/*设置上中下居中*/
+			line-height: 100px;
+			padding: 10px;
+			/*hiiden  scroll滚动条  auto超出含滚动条，不超出则莫有*/
+			overflow:auto ;
+		}
+	</style>
+	<body>
+		<span id="one1">
+			这是一段文本1
+		</span>
+		<span id="tow1">
+			这是一段文本2
+		</span>
+		<br />
+		<br /><br /><br /><br /><br />
+		<!--默认换行-->
+		<div id="one">
+			这是一段文本3
+		</div>
+		<div id="tow">
+			这是一段文本4
+		</div>
+		<div id="tow" class="ss">
+			这是一段文本5
+		</div>
+		这是一段文本5
+		<div id="three">
+			这是一段文本6	这是一段文本6
+			这是一段文本6
+			这是一段文本6	这是一段文本6
+			这是一段文本6	这是一段文本6
+			这是一段文本6	这是一段文本6
+			这是一段文本6
+		</div>
+	</body>
+</html>
