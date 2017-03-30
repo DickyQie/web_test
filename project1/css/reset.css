@@ -1,0 +1,61 @@
+body, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6,
+pre, code, form, fieldset, legend, input, button, textarea,
+p, blockquote, th, td,div{margin:0;padding:0;}
+
+h1, h2, h3, h4, h5, h6{font-size:100%;}
+
+ul,li{list-style-type:none;margin:0;padding:0;}
+
+img{border:0;}
+
+ol, ul{list-style:none;}
+
+
+
+/*
+ * 会影响界面性能
+ *{
+ 	margin:0;
+ 	padding:0;
+  }
+ * */
+
+/*自己总结的每个都可使用*/
+
+body, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6,
+pre, code, form, fieldset, legend, input, button, textarea,
+p, blockquote, th, td{margin:0;padding:0;}
+
+
+body h1, h2, h3, h4, h5, h6 ,span{font-size:14px; font-family: "微软雅黑";}
+
+ul,li{list-style-type:none;}
+
+
+img{border:0;}
+
+a{
+	text-decoration: none;
+}
+
+.clear{
+	clear: both;/*清除浮动*/
+}
+
+
+/*万能的清除浮动*/
+
+html body div.clear,html body span .clear{
+	background: none;
+	border: 0;
+	clear: both;
+	float: none;
+	font-size: 0;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
