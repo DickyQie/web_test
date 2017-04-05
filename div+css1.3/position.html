@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>position</title>
+	</head>
+	<style type="text/css">
+		*{margin: 0px 0px;padding: 0px 0px;}
+		/*相对父级div来布局*/
+		.one{
+			position: relative;
+			width: 100px;
+			height: 25px;
+			top: 25px;
+			left: 25px;
+			background: red;
+		}
+		/*相当于浏览器来布局*/
+			.tow{
+			position: absolute;
+			width: 100px;
+			height: 25px;
+			top: 125px;
+			left: 55px;
+			background: gold;
+		}
+		.three{
+			position: fixed;/*固定定位相对于父div 如广告在上面一样*/
+			top: 66px;
+			left: 66px;
+			background-color: green;
+			z-index: 2;/*层的覆盖关系值越高越在上面*/
+		}
+		.four{
+			position: absolute;
+			width: 300px;
+			height: 200px;
+			top: 200px;
+			left: 100px;
+			background: greenyellow;
+		}
+		.fine{
+			position: relative;
+			top: 5px;
+			left: 25px;
+			background: lawngreen;
+		}
+	</style>
+	<body>
+		<div class="one">这是one</div>
+		<div class="tow">这是tow</div>
+		<div class="three">这是three</div>
+		<div class="four">这是four
+			<div class="fine">这是fine</div>
+		</div>
+		
+	</body>
+</html>
