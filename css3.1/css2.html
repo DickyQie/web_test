@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>CSS3关系选择器</title>
+	</head>
+	<style type="text/css">
+		/*包含选择符（E F）：与 子选择符(E>F) 不同的是，后代只要包含都会执行*/
+		.demo div{
+			border: 1px solid red;
+		}
+		
+		
+		/*子选择符（E > F）：与 包含选择符(E F) 不同的是，子选择符只能命中子元素，而不能命中孙辈。 */
+		.test > li > a{
+			color: red;
+		}
+		
+		.dd > div{
+			border: 1px solid darkgoldenrod;
+		}
+		
+		/*相邻选择符(E+F):与 兄弟选择符(E~F) 相同的是，相邻选择符也是选择同级的元素F；不同的是，
+		 * 相邻选择符只会命中符合条件的那个毗邻的兄弟元素（即紧挨着E元素之后的第一个F元素）。 */
+		h3+p{
+			color: green;
+		}
+		
+		/*兄弟选择符(E~F)：与 相邻选择符(E+F) 不同的是，兄弟选择符会命中所有符合条件的兄弟元素，
+		 * 而不强制是紧邻的元素。 */
+		h1~p{
+			color: greenyellow;
+			font-weight: bolder;
+		}
+		
+	</style>
+	<body>
+		<div class="demo">
+			<div>0
+				<div>1</div>
+				<div>2</div>
+				<div>3</div>
+			</div>
+		</div>
+		
+		<hr>
+		
+		
+		
+		<ul class="test">
+			<li>
+				<a href="">你好1</a>
+				<ul><li><a href="">天下1</a></li></ul>
+			</li>
+		
+			<li>
+				<a href="">你好2</a>
+				<ul><li><a href="">天下2</a></li></ul>
+			</li>
+		</ul>
+		
+		<div class="dd">
+			<div class="a">
+				dd
+				<div class="c">sdf</div>
+			</div>
+		</div>
+		
+		<hr>
+		
+		
+		<h3>标题</h1>
+		<p>标题1</p>
+		<p>标题2</p>
+		<p>标题3</p>
+		
+		<h1>标题</h1>
+		<p>标题1</p>
+		<p>标题2</p>
+		<p>标题3</p>
+		<h2>ddd</h2>
+		<p>标题1</p>
+		<p>标题2</p>
+		<p>标题3</p>
+		
+	</body>
+</html>

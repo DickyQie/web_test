@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>CSS3属性-边框</title>
+	</head>
+	<style type="text/css">
+		li{
+			list-style: none;
+			margin: 10px 0 0 0;
+			padding: 10px;
+			background: #bbb;
+		}
+		li[class="one"]{
+			border-top-left-radius: 30px;
+		}
+		li[class~="two"]{
+			border-top-left-radius: 10px 30px;
+		}
+		
+		.r li[class^="on"]{
+			border-top-right-radius: 30px;
+		}
+		
+		.r > li[class$="oe"]{
+			border-top-right-radius: 10px 30px;
+		}
+		
+		
+		/*box-shadow*/
+		.tese li[class]{
+			box-shadow: 5px 5px rgba(0,0,0,.6);
+		}
+		.tese li[class="box2"]{
+			box-shadow: 5px 5px 5px rgba(0,0,0,.6);
+		}
+		.tese li[class~="box3"]{
+			box-shadow: 5px 5px 5px 10px rgba(0,0,0,.6);
+			margin-top: 35px;
+		}
+		.tese > li[class|="inset"]{
+			box-shadow: 2px 2px 5px 1px rgba(0,0,0,.6) inset;
+			margin-top: 35px;
+		}
+		
+		.tese .inset-1+.multiple-shadow{
+			box-shadow: 0 0 5px 3px rgba(255, 0, 0, .6),
+						0 0 5px 6px rgba(0, 182, 0, .6),
+						0 0 5px 10px rgba(255, 255, 0, .6);
+						margin-top: 35px;
+		}
+		
+		
+	</style>
+	<body>
+		
+		<!--border-top-left-radius-->
+	<!--设置或检索对象的左上角圆角边框。提供2个参数，2个参数以空格分隔，每个参数允许设置1个参数值，
+			第1个参数表示水平半径，第2个参数表示垂直半径，如第2个参数省略，则默认等于第1个参数
+              如设置border-top-left-radius:5px 10px表示top-left这个角的水平圆角半径为5px，垂直圆角半径为10px。-->
+		<ul>
+			<li class="one">水平与垂直半径相同时<br />border-top-left-radius:30px;</li>
+			<li class="two">水平与垂直半径不同时<br />border-top-left-radius:10px 30px;</li>
+		</ul>
+		
+		<!--border-top-right-radius-->
+		<ul class="r">
+			<li class="onee">水平与垂直半径相同时<br />border-top-right-radius:30px;</li>
+		    <li class="twoe">水平与垂直半径不同时<br />border-top-right-radius:10px 30px;</li>
+		</ul>
+		
+		
+		<!--border-bottom-right-radius 同上-->
+		
+		
+		
+		<!--box-shadow添加阴影-->
+		<ul class="tese">
+			<li class="box1">外阴影常规效果<br />box-shadow:5px 5px rgba(0,0,0,6);</li>
+			<li class="box2">外阴影模糊效果<br />box-shadow:5px 5px 5px rgba(0,0,0,6);</li>
+			<li class="box3 s">外阴影模糊外延效果<br />box-shadow:5px 5px 5px 10px rgba(0,0,0,6);</li>
+			<li class="inset-1">内阴影效果<br />box-shadow:2px 2px 5px 1px rgba(0,0,0,6) inset;</li>
+			<li class="multiple-shadow">外阴影模糊<br />效果</li>
+		</ul>
+		
+	</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>CSS3-属性选择符</title>
+	</head>
+	
+	<style type="text/css">
+		/*E[att] 无值 */
+		div[class]{
+			background: green;
+		}
+		
+		/*E[att="val"]  有值*/
+		div[align=center]{
+			color: green;
+		}
+		
+		/*选择具有att属性且属性值为一用空格分隔的字词列表，其中一个等于val的E元素
+		 * （包含只有一个值且该值等于val的情况）。 */
+		/*E[att~="val"] 第1和第3个div匹配到了class属性*/
+		div[class~="a"]{
+			border: 1px solid #008000;
+			margin-top: 15px;
+		}
+		p[title~="is"]{
+			color: darkgoldenrod;
+		}
+		
+		/*选择具有att属性且属性值为以val开头并用连接符"-"分隔的字符串的E元素，
+		 * 如果属性值仅为val，也将被选择。*/
+		/*E[att|="val"] */
+		li[class|="test"]{
+			list-style-image: url("http://www.w3school.com.cn/i/eg_arrow.gif")
+		}
+		
+		
+		/*选择具有att属性且属性值为以val开头的字符串的E元素。*/
+		/*E[att^="val"]*/
+		p[title^="valu"]{
+			color: red;
+		}
+		
+		/*选择具有att属性且属性值为以val结尾的字符串的E元素。*/
+		/*E[att$="val"] */
+		div[class$="c"]{
+			color: gold;
+			font-size: 28px;
+		}
+		
+		/*选择具有att属性且属性值为包含val的字符串的E元素。*/
+		/*E[att*="val"] */
+		li[class*=b]{
+			color: red;
+			list-style-image: url("http://www.w3school.com.cn/i/eg_arrow.gif")
+		}
+		
+	</style>
+	<body>
+		<div class="d1">匹配具有class属性</div>
+		
+		<div align="center">匹配具有align="center"属性</div>
+		
+		<hr>
+		<div class="a">1</div>
+		<div class="b">1</div>
+		<div class="a b">1</div>
+		<p title="this is val">第三方</p>
+		
+		<ul>
+			<li class="test1-1">你好</li>
+			<li class="test">我好</li>
+			<li class="test-1">大家好</li>
+		</ul>
+		
+		
+		
+		<hr>
+		
+		<p title="value">匹配具有att属性、且值以val开头的E元素</p>
+		
+		
+		<div class="abc">1</div>
+		<div class="abb">2</div>
+		<div class="aac">3</div>
+		
+		
+		<ul>
+			<li class="aab">vid1</li>
+			<li class="ccc b">vid2</li>
+			<li class="ccc">vid3</li>
+		</ul>
+		
+	</body>
+</html>

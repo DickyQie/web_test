@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>CSS3+渐变</title>
+	</head>
+	<style type="text/css">
+	div{width: 200px;height: 100px;}
+	/*线性渐变*/
+		#linear1{
+			background:-webkit-linear-gradient(top,red,blue);
+			background: -moz-linear-gradient(top,red,blue);
+		}
+		#linear2{
+			background:-webkit-linear-gradient(top,red 50%,green 75%,blue 100%);
+		}
+		#linear3{
+			background:-webkit-linear-gradient(-45deg,orange,purple);
+		}
+		#linear4{
+			height: 200px;
+			background:-webkit-linear-gradient(top,red,orange,yellow,green,cyan,blue);
+		}
+		/*径向渐变*/
+	#redial1{
+	background:-webkit-radial-gradient(center center,red,blue);
+	}
+	#redial2{
+	background:-webkit-radial-gradient(center center,cyan 25%,blue 75%,yellow 100%);
+	}
+	#redial3{
+		/*设置径向渐变的位置可以使用位置单词或者像素显示单位*/
+	background:-webkit-radial-gradient(20PX 70px,#000,#fff);
+	}
+	#redial4{
+		/*渐变默认椭圆（如果是正方形，将显示圆形渐变），可设置为圆形circle*/
+	background:-webkit-radial-gradient(center center,circle,red,green);
+	}
+	.repeat-linear{
+		background: -webkit-repeating-linear-gradient(top,red,green,red 20%);
+	}
+	.repeat-redial{
+		width: 300px;height: 100px;
+		background: -webkit-repeating-radial-gradient(center center,circle,red,green,red 10%);
+	}
+	#white{
+		width: 200px;height: 200px;border-radius: 100px;
+		box-shadow: -5px 5px 15px #000;
+		background: -webkit-radial-gradient(140px 60px,circle,#FFF,#666);
+		
+	}
+	</style>
+	<body>
+		<div id="linear1"></div>
+		<div id="linear2"></div>
+		<div id="linear3"></div>
+		<div id="linear4"></div>
+		<div id="redial1"></div>
+		<div id="redial2"></div>
+		<div id="redial3"></div>
+		<div id="redial4"></div>
+		<div class="repeat-linear"></div>
+		<div class="repeat-redial"></div>
+		<div id="white"></div>
+		
+		<p>ss</p>
+		
+	</body>
+</html>

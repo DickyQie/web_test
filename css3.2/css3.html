@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>CSS3属性-边框</title>
+	</head>
+	<style type="text/css">
+		div{
+			border:15px solid transparent;
+			width:250px;
+			padding:5px 20px;
+		}
+		div[class^="roun"]{
+			/*-webkit-border-image: url(../img/border.png) 30 30 round;*/
+			border-image: url(../img/border.png) 30 30 round;/*取其一*/
+			-moz-border-image: url(../img/border.png) 30 30 round;
+		}
+		div[class$="tch"]{
+			-webkit-border-image: url(../img/border.png) 30 30 stretch;
+			border-image: url(../img/border.png) 30 30 stretch;/*取其一*/
+			-o-border-image:url(border.png) 30 30 stretch; /* Opera */
+		}
+		
+		div[class*="tt"]{
+			border-image-source: url(../img/border.png);
+			border-image-slice: 31;/*裁剪背景图的宽度==指定图像的边界向内偏移：*/
+			/*
+			 * 保留裁减后的中间区域 fill
+			 * border-image-slice: 1 9 fill;*/
+
+			border-image-width: 15px;/*宽度*/
+		}
+		
+		div[class*="sss"]{
+			border-image-source: url(../img/border.png);
+			border-image-slice: 31px;
+			border-image-width: 15px;
+			border-image-outset: 10px 5px 3px;
+			margin-top: 15px;
+		}
+		
+		div[class^="myd"]{
+			border:15px solid transparent;
+			padding: 15px;
+			border-image-source: url(../img/border.png);
+			border-image-slice: 30;
+			border-image-repeat: round;
+			border-image-outset: 10px 5px 2px 5px;
+		/*	border-image-outset:1 0 1 1;*/
+			margin-top: 25px;
+		}
+		
+		div[class$="est"]{
+		padding: 10px;
+		border-image-source: url(../img/border.png);
+		border-image-slice: 27;
+		border-image-width: auto;
+		border-image-repeat: repeat;
+		}
+		
+	</style>
+	<body>
+		<p> border-image 属性用于设置图片的边框。</p>
+		<div class="round">这里，图像平铺（重复）来填充该区域。</div>
+		<br>
+		<div class="stretch">这里，图像被拉伸以填充该区域。</div>
+
+		<p>这是我们使用的图片素材：</p>
+		<img src="../img/border.png" />
+		<hr />
+		
+		<div class="ttt">用图片来做边框</div>
+		
+		<div class="ssss">用图片来做边框</div>
+		
+		
+		<div class="mydiv">用图片来做边框</div>
+		
+		
+		
+		<div class="test">用图片来做边框</div>
+	</body>
+</html>
