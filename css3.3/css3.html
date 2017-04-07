@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>CSS3属性-3D</title>
+	</head>
+	<style type="text/css">
+	div
+	{
+		width:100px;
+		height:75px;
+		background-color:red;
+		border:1px solid black;
+	}
+	/*包含 x y z*/
+	div[id|="div2"]{
+		transform:rotateX(120deg);
+		-webkit-transform:rotateX(220deg); /* Safari and Chrome */
+		
+		
+		/*-webkit-transform: scale3d(2,1,2);*/
+	}
+	</style>
+	<body>
+		三维来看待，在2D基础上添加
+		
+		<div>Hello. This is a DIV element.</div>
+
+		<div id="div2">Hello. This is a DIV element.</div>
+		
+	</body>
+</html>

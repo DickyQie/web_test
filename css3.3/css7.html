@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>CSS3属性-弹性盒子</title>
+	</head>
+	<style type="text/css">
+		/*align-content 属性*/
+		/*
+		 
+    stretch - 默认。各行将会伸展以占用剩余的空间。
+    flex-start - 各行向弹性盒容器的起始位置堆叠。 上到下开始
+    flex-end - 各行向弹性盒容器的结束位置堆叠。 下到上开始
+    center -各行向弹性盒容器的中间位置堆叠。  中间
+    space-between -各行在弹性盒容器中平均分布。
+    space-around - 各行在弹性盒容器中平均分布，两端保留子元素与子元素之间间距大小的一半。
+
+		 * */
+		
+		.flex-container{
+			display: -webkit-flex;
+			display: flex;
+			-webkit-flex-wrap: wrap;
+			flex-wrap: wrap;
+			 align-content:  center; 
+			-webkit-align-content:  center;
+			width: 300px;
+			height: 300px;
+			background: indianred;
+		}
+		.flex-container div[class$="-item"].flex-item {
+	   		background-color: cornflowerblue;
+		    width: 100px;
+		    height: 100px;
+		    margin: 10px;
+		}
+		
+		
+		/*order:属性设置弹性容器内弹性子元素的属性: 排序 数值小的排在前面。可以为负值*/
+		.flex-container1{
+			display: flex;
+			display: -webkit-flex;
+			width: 400px;
+			height: 150px;
+			background: gray;
+			margin-top: 10px;
+		}
+		.flex-container1 div[class^="flex-"]{
+			background-color: cornflowerblue;
+		    width: 100px;
+		    height: 100px;
+		    margin: 10px;
+		}
+		.flex-container1 div[class*="first"]
+		{
+			-webkit-order: -1;
+			order: -1;
+		}
+		
+		
+		/*对齐
+		设置"margin"值为"auto"值
+		自动获取弹性容器中剩余的空间
+			
+		* */
+		.flex-container2{
+			display: flex;
+			display: -webkit-flex;
+			width: 400px;
+			height: 110px;
+			background: gray;
+			margin-top: 10px;
+		}
+		.flex-container2 div[class$="item"]{
+			background-color: cornflowerblue;
+		    width: 75px;
+		    height: 75px;
+		    margin: 10px;
+		}
+		.flex-container2 div[class$="item"]:first-child{
+			margin-right: auto;
+		}
+		
+		/*弹性盒子，居中变的很简单*/
+		.flex-container3{
+		    display: -webkit-flex;
+		    display: flex;
+		    width: 400px;
+		    height: 110px;
+		    background-color: lightgrey;
+		    margin-top: 10px;
+		}
+		
+		.flex-container3 > .flex-item{
+			 background-color: cornflowerblue;
+    		 width: 75px;
+    		 height: 75px;
+    		 margin: auto;
+		}
+		
+		/*align-self 属性用于设置弹性元素自身在侧轴（纵轴）方向上的对齐方式。*/
+		.flex-container4{
+		    display: -webkit-flex;
+		    display: flex;
+		    width: 400px;
+		    height: 210px;
+		    background-color: lightgrey;
+		    margin-top: 10px;
+		}
+		.flex-container4 div[class*="item"]{
+			background-color: cornflowerblue;
+		    width: 60px;
+		    min-height:90px;
+		    margin: 10px;
+		}
+		.item1{
+			-webkit-align-self: flex-start;
+			align-self: flex-start;
+		}
+		.item2{
+			-webkit-align-self: flex-end;
+			align-self: flex-end;
+		}
+		.item3{
+			-webkit-align-self: center;
+			align-self: center;
+		}
+		.item4{
+			-webkit-align-self: baseline;
+			align-self: baseline;
+		}
+		.item5{
+			-webkit-align-self: stretch;
+			align-self: stretch;
+		}
+	</style>
+	<body>
+		
+		<div class="flex-container">
+		  <div class="flex-item">flex item 1</div>
+		  <div class="flex-item">flex item 2</div>
+		  <div class="flex-item">flex item 3</div>  
+		</div>
+		
+		<div class="flex-container1">
+		  <div class="flex-item">flex item 1</div>
+		  <div class="flex-item first">flex item 2</div>
+		  <div class="flex-item">flex item 3</div>  
+		</div>
+		
+		<div class="flex-container2">
+		  <div class="flex-item">flex item 1</div>
+		  <div class="flex-item">flex item 2</div>
+		  <div class="flex-item">flex item 3</div>  
+		</div>
+		
+		<div class="flex-container3">
+  			<div class="flex-item">Perfect centering!</div>
+		</div>
+		
+		
+		<div class="flex-container4">
+		  <div class="flex-item item1">flex-start</div>
+		  <div class="flex-item item2">flex-end</div>
+		  <div class="flex-item item3">center</div>
+		  <div class="flex-item item4">baseline</div>
+		  <div class="flex-item item5">stretch</div>
+		</div>
+		
+		
+		
+		
+	</body>
+</html>

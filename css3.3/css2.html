@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>CSS3属性-2D</title>
+	</head>
+	
+	<style type="text/css">
+		div
+		{
+			width:100px;
+			height:75px;
+			background-color:red;
+			border:1px solid black;
+		}
+		div[id*="div"]{
+			transform: translate(50px, 50px);
+			-ms-transform:translate(50px,50px); /* IE 9 */
+			-webkit-transform:translate(50px,50px); /* Safari and Chrome */
+		}
+		
+		/*rotate 顺时针旋转的元素*/
+		div[class~="rorate"]{
+			transform: rotate(30deg);
+			-webkit-transform: rotate(30deg);
+			-ms-transform:rotate(30deg); /* IE 9 */
+			
+			
+			/*scale（2,3）转变宽度为原来的大小的2倍，和其原始大小3倍的高度。*/
+			-ms-transform:scale(1,2); /* IE 9 */
+			-webkit-transform: scale(1,2); /* Safari */
+			transform: scale(1,2); /* 标准语法 */
+
+
+		/*指定对象skew transformation（斜切扭曲）。
+		 * 第一个参数对应X轴，第二个参数对应Y轴。如果第二个参数未提供，则默认值为0*/
+			
+		}
+	</style>
+	<body>
+		<div>Hello. This is a DIV element.</div>
+
+	    <div id="div2">Hello. This is a DIV element.</div>
+	    
+	    
+	    <div>你好。这是一个 DIV 元素。</div>
+
+		<div class="rorate b">你好。这是一个 DIV 元素。</div>
+	    
+	</body>
+</html>

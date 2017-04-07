@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>CSS3属性-弹性盒子</title>
+	<style>
+		
+		
+		.flex-container{
+			display: -webkit-flex;
+			display: flex;
+			width: 400px;
+			height: 150px;
+			background-color: lightgray;
+		}
+		
+		.flex-container div[class|="flex"]{
+			background-color: cornflowerblue;
+			width: 100px;
+			height: 100px;
+			margin: 10px;
+		}
+		/*设置 direction 属性为 rtl (right-to-left),弹性子元素的排列方式也会改变，页面布局也跟着改变:*/
+		/*body{
+			direction: rtl;
+		}*/
+		
+		
+		/*
+		 flex-direction的值有:
+    row：横向从左到右排列（左对齐），默认的排列方式。
+    row-reverse：反转横向排列（右对齐，从后往前排，最后一项排在最前面。
+    column：纵向排列。
+    column-reverse：反转纵向排列，从后往前排，最后一项排在最上面。
+		 * */
+		.flex-container1{
+			display: -webkit-flex;
+			display: flex;
+			-webkit-flex-direction: row-reverse;
+			flex-direction: row-reverse;
+			width: 400px;
+			height: 150px;
+			background-color:lightcyan ;
+			margin-top: 15px;
+		}
+		
+		.flex-container1 div[class|="flex"]{
+			background-color: cornflowerblue;
+			width: 100px;
+			height: 100px;
+			margin: 10px;
+		}
+		
+		
+		/*
+		 * http://www.runoob.com/css3/css3-flexbox.html
+		 * justify-content属性
+		 -webkit-justify-content
+		 flex-start：从左到右排列
+		 flex-end：从右到左排列
+		 center：中间开始排列
+		 space-between：平分
+		 space-around：平分，且两边占1/2
+		 * */
+		.flex-container2{
+			display: -webkit-flex;
+			display: flex;
+			-webkit-justify-content: space-around;
+			width: 400px;
+			height: 150px;
+			background: lawngreen;
+			margin-top: 10px;
+		}
+		
+		.flex-container2 div[class|="flex"]{
+			background-color: cornflowerblue;
+		    width: 100px;
+		    height: 100px;
+		    margin: 10px;
+		}
+		
+		/*
+		 align-items 属性:侧轴（纵轴）方向上的对齐方式。左边
+		 flex-start： 顶部开始
+		 flex-end： 低部开始
+		 center 居中
+		 baseline
+		 stretch
+		 * */
+		.flex-container3 {
+			display: -webkit-flex;
+			display: flex;
+			-webkit-align-items: flex-end;
+			align-items: flex-end;
+			width: 400px;
+			height: 150px;
+			background: lightcoral;
+			margin-top: 10px;
+		}
+		.flex-container3 div[class|="flex"]{
+			background-color: cornflowerblue;
+			width: 100px;
+			height: 100px;
+			margin: 10px;
+		}
+		
+		/*flex-wrap 属性
+    nowrap - 默认， 弹性容器为单行。该情况下弹性子项可能会溢出容器。
+    wrap - 弹性容器为多行。该情况下弹性子项溢出的部分会被放置到新行，子项内部会发生断行
+    wrap-reverse -反转 wrap 排列。
+		 * */
+		.flex-container4{
+			display: -webkit-flex;
+			display: flex;
+			-webkit-flex-wrap: wrap-reverse;
+			flex-wrap: wrap-reverse;
+			width: 300px;
+			height: 250px;
+			background: goldenrod;
+			margin-top: 10px;
+		}
+		.flex-container4 div[class|="flex"]{
+			 background-color: cornflowerblue;
+    		 width: 100px;
+    		 height: 100px;
+    		 margin: 10px;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="flex-container">
+	  <div class="flex-item">flex item 1</div>
+	  <div class="flex-item">flex item 2</div>
+	  <div class="flex-item">flex item 3</div>  
+	</div>
+	
+	<div class="flex-container1">
+	  <div class="flex-item">flex item 1</div>
+	  <div class="flex-item">flex item 2</div>
+	  <div class="flex-item">flex item 3</div>  
+	</div>
+	
+	
+	<div class="flex-container2">
+	  <div class="flex-item">flex item 1</div>
+	  <div class="flex-item">flex item 2</div>
+	  <div class="flex-item">flex item 3</div>  
+	</div>
+	
+	
+	<div class="flex-container3">
+	  <div class="flex-item">flex item 1</div>
+	  <div class="flex-item">flex item 2</div>
+	  <div class="flex-item">flex item 3</div>  
+	</div>
+	
+	
+	<!--flex-wrap 属性用于指定弹性盒子的子元素换行方式。-->
+	<div class="flex-container4">
+		  <div class="flex-item">flex item 1</div>
+		  <div class="flex-item">flex item 2</div>
+		  <div class="flex-item">flex item 3</div>  
+	</div>
+	
+</body>
+</html>
