@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		.test::after{
+			color: red;
+		}
+		@media screen and (orientation: portrait)
+		{
+			.test::after{
+				content: "竖屏";
+			}
+		}
+		@media screen and (orientation: landscape)
+		{
+			.test::after{
+				content: "横屏";
+			}
+		}
+	</style>
+	<body>
+		<div class="test">你现在是：</div>
+	</body>
+</html>

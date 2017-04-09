@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>CSS3选择符-伪类选择符</title>
+	</head>
+	<style type="text/css">
+		/*设置处理  .abc 这个  其他的全部改变*/
+		p:not(.abc){
+			color: red;
+		}
+		/*全在HTML中根元素*/
+		:root{
+			color: goldenrod;
+		}
+		li:root(#tow){
+			color: green;
+		}
+		/*匹配没有任何子元素（包括text节点）的元素E。*/
+		div[class$="est"] p:empty {
+			height: 25px;
+			border: 1px solid #ddd;
+			background: #eee;
+		}
+	</style>
+	<body>
+		<p class="abc">否定伪类选择符 E:not(s)</p>
+		<p id="abc">否定伪类选择符 E:not(s)</p>
+		<p class="abcd">否定伪类选择符 E:not(s)</p>
+		<p>否定伪类选择符 E:not(s)</p>
+		
+		
+		<ul>
+			<li>aaaaa</li>
+			<li id="tow" class="one">aaaaa</li>
+			<li>aaaaa</li>
+			<li>aaaaa</li>
+		</ul>
+		
+		<div class="test">
+			<p>结构性伪类选择符 E:empty</p>
+			<p><!--我是一个空节点p，请注意我与其它非空节点p的外观有什么不一样--></p>
+			<p>结构性伪类选择符 E:empty</p>
+		</div>
+	</body>
+</html>

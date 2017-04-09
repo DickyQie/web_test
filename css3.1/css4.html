@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>CSS3选择符-伪类选择符</title>
+	</head>
+	<style type="text/css">
+		/*匹配父元素的第一个子元素E。*/
+		li:first-child{
+			color: red;
+		}
+		/*匹配父元素的最后一个子元素E。*/
+		li:last-child{
+			color: green;
+		}
+		/*只有唯一一个子元素使用 E:only-child  其他没变化*/
+		li:only-child{
+			color: gold;
+		}
+		/*起始指定位置    倒数指定位置 li：nth-last-child（n）*/
+		li:nth-child(2){
+			background: gray;
+		}
+		/*偶数行  奇数  2n+1*/
+		div ul li:nth-child(2n){
+			background: greenyellow;
+		}
+		/*要使该属性生效，E元素必须是某个元素的子元素，
+		 该选择符总是能命中父元素的第1个为E的子元素
+		 * */
+		/*last-of-type则是最后一个
+		  only-of-type  唯一一个
+		 * */
+		div[class="a"] p:first-of-type{
+			color: red;
+		}
+		
+		/*nth-last-of-type最后一个*/
+		div[class^="b"] p:nth-of-type(2){
+			color: gold;
+		}
+		
+		
+	</style>
+	<body>
+		
+		<ul>
+			<li>aaaaa</li>
+			<li id="tow" class="one">aaaaa</li>
+			<li>aaaaa</li>
+		</ul>
+		<ul>
+			<li>aaaaa</li>
+			<li id="tow" class="one">aaaaa</li>
+			<li>aaaaa</li>
+			<li>aaaaa</li>
+		</ul>
+		<h3>只有唯一一个子元素使用 E:only-child</h1>
+		<ul>
+			<li>结构性伪类选择符 E:only-child</li>
+		</ul>
+		
+		<div>
+			<ul>
+				<li>a</li>
+				<li>b</li>
+				<li>c</li>
+				<li>d</li>
+				<li>e</li>
+			</ul>
+		</div>
+		
+		<div class="a">
+			<p>ss1</p>
+			<p>ss2</p>
+			<p>ss3</p>
+		</div>
+		
+		<div class="b">
+			<p>我是一个p元素</p>
+			<div>我是一个div元素</div>
+			<p>我是一个p元素</p>
+			<p>我是一个p元素</p>
+		</div>
+	</body>
+</html>
