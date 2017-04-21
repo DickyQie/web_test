@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	
+	<script type="text/javascript">
+		function goBack()
+		{
+			//window.history.back();
+			window.history.go(-1);
+		}
+		
+		function goF(){
+			window.history.go(-1);//返回上一级
+		}
+		
+		function goLocation()
+		{
+			window.location.href="js1.html";
+		}
+	</script>
+	<body>
+		
+		
+		<input type="button" value="返回上一级" onclick="goBack();" />
+		
+		<input type="button" value="下一级" onclick="goF();" />
+		
+		
+		<input type="button" value="location" onclick="goLocation();" />
+	</body>
+</html>

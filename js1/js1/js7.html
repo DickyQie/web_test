@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		function conf(){
+			var r=confirm("确认删除吗");
+			if(r){
+				document.getElementById("m1").value="true";
+			}else{
+				document.getElementById("m1").value="false";
+			}
+		}
+		
+		var c=0;
+		var t;
+		function timestart(){
+			document.getElementById("txt").value=c;
+			c=c+1;
+			t=setTimeout("timestart()",1000);
+		}
+		function stop(){
+			clearTimeout(t);
+		}
+		
+		function open_url(){
+			window.open("http://www.baidu.com");/*打开新界面*/
+		}
+		
+		
+		function goF(){
+			//window.history.forward(); //加载历史列表的下一个
+			window.history.go(1);
+		}
+	</script>
+	<body>
+		
+		<input type="button" id="m1" value="confirm" onclick="conf()" />
+		
+		<input type="button" value="开始计数" onclick="timestart()" />
+		
+		<input type="text" id="txt" />
+		
+		<input type="button" value="停止" onclick="stop()" />
+		
+		<input type="button" value="ll" onclick="open_url()" />
+		
+		<br />
+		<a href="js8.html">前进和后退界面</a>
+		
+		<input type="button" value="下一级" onclick="goF();" />
+	</body>
+</html>

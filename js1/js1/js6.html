@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function ll(txt)
+			{
+				document.write(txt+"<br />");
+			}
+			//isNaN() 是否非数字
+			ll(isNaN(123));
+			ll(isNaN("123s"));
+			//eval() 计算某个字符串
+			var x=13
+			ll(eval("x+3"));
+			
+			/*转换类型*/
+			var a="13";
+			var b="12.15";
+			ll(parseFloat(b)+parseInt(a));
+			
+			/*Math数学对象*/
+			
+			ll(Math.round(1.56));//四舍五入
+			ll(Math.max(1,5,9,3));
+			ll(Math.ceil(1.2));/*向上取整*/
+			ll(Math.floor(1.9));/*向下取整*/
+			ll(Math.random());/*0-1之间的随机数*/
+			ll(Math.floor(Math.random()*100+1))//1-101
+			
+			//正则表达式
+			
+			function $(txtname)
+			{
+				return document.getElementById(txtname);
+			}
+	
+			function reg(){
+				var name=$("txtname").value;
+				var regname=new RegExp("^[a-zA-z]{6,}$");
+				if(!regname.test(name)){
+					alert("用户名至少6位字母组成!");
+					$("txtname").focus();
+					return;
+				}
+				
+				var pwd=$("txtpwd").value;
+				var pwdReg=new RegExp("^[0-9]{6,}$");
+				if(!pwdReg.test(pwd)){
+					alert("密码为6位数字!");
+					$("txtpwd").focus();
+					return;
+				}
+					//生日
+			var birthday = $("txtbirthday").value;
+			var birthdayReg = new RegExp("^[1-9]{4}-|/[0-9]{2}-|/[0-9]{2}$");
+			if(!birthdayReg.test(birthday))
+			{
+				alert("出生日期为格式错误!");
+				$("txtbirthday").focus();
+				return;
+			}
+			
+			//邮箱
+			var email = $("txtemail").value;
+			var emailReg= new RegExp("^[0-9a-zA-Z]{1,}@[0-9a-zA-Z]{2,}(\\.com|\\.cn)$");
+			if(!emailReg.test(email))
+			{
+				alert("邮箱格式错误!");
+				$("txtemail").focus();
+				return;
+			}
+				}
+		</script>
+		
+	请输入用户名：<input type="text" id="txtname"/>至少6位字母<br/></br>
+	请输入密码：<input type="text" id="txtpwd"/>6位数字<br/></br>
+	请输入电话号码：<input type="text" id="txtphone"/>移动电话格式<br/></br>
+	请输入出生日期：<input type="text" id="txtbirthday"/>格式为:1999-9-9   1999/9/9<br/></br>
+	请输入邮箱地址：<input type="text" id="txtemail"/>格式为:abcd@qq.com<br/></br>
+	
+	<input type="button" value="注  册" onClick="reg()"/>
+	</body>
+</html>

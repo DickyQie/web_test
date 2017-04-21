@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>运算符</title>
+	</head>
+	<style type="text/css">
+		table{
+			align-content: center;
+			width: 500px;
+			height:300px;
+			border: 1px solid red;
+			}
+			input{
+				border: 1px solid green;
+				width: 250px;
+				height: 40px;
+			}
+	</style>
+	<script type="text/javascript">
+		function $(textName){
+			return document.getElementById(textName);
+		}
+		function show()
+		{
+			var num1=$("num1").value;
+			var num2=$("num2").value;
+			var type=$("num3").value;
+			if(num1==""){
+				alert("输入有误");
+				$("num1").focus();
+				return;
+			}
+			
+			if(num2==""){
+				alert("输入有误");
+				$("num2").focus();
+				return;
+			}
+			if(type==""){
+				alert("输入有误");
+				$("num2").focus();
+				return;
+			}
+			var n1=parseInt(num1);
+			var n2=parseInt(num2);
+			
+			var sum=0;
+			
+			switch(type)
+			{
+				case "+":
+					sum=n1+n2;
+					break;
+				case "-":
+					sum=n1+n2;
+					break;
+				case "*":
+					sum=n1+n2;
+					break;
+				case "/":
+					sum=n1+n2;
+					break;
+				default:
+					alert("输入运算符有误");
+					break;
+			}
+			alert("运算结果："+sum);
+			$("num1").value="";
+			$("num2").value="";
+			$("num3").value="";
+			
+		}
+		
+	</script>
+	<body>
+		<script type="text/javascript">
+			for(var i=1;i<9;i++){
+				for(var j=1;j<=i;j++)
+				{
+					document.write(i+"&nbsp*&nbsp;"+j+"="+(i*j)+"&nbsp");
+				}
+				document.write("<br>");
+			}
+			
+			var a=["a","b","c"];
+			for(var i in a)
+			{
+				document.writeln(a[i]+"<hr/>")
+			}
+			
+			
+			
+		</script>
+		<table align="center" cellpadding="0px" border="1px" cellspacing="5px">
+			<tr>
+				<td align="center">请输入第一个数</td>
+				<td align="center"><input type="text" value="" id="num1" placeholder="请输入第一个数"></td>
+			</tr>
+			<tr>
+				<td align="center">请输入第二个数</td>
+				<td align="center"><input type="text" value="" id="num2" placeholder="请输入第二个数"></td>
+			</tr>
+			<tr>
+				<td align="center">请输入运算符号</td>
+				<td align="center"><input type="text" value="" id="num3" placeholder="请输入运算符号"></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center"><input type="button" value="计算结果" onclick="show();"></td>
+			</tr>
+		</table>
+	</body>
+</html>
