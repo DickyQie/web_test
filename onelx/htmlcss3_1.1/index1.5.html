@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>CSS3结构性伪类选择器3</title>
+	</head>
+	<style type="text/css">
+		p:nth-of-type(2){background: red;}
+		p:nth-last-of-type(1){background: gold;}
+		h5:nth-child(2n+2){background: green;}
+		/*以上等同与index1.4*/
+		/*匹配父元素仅有一个子元素 列：只有一个h6 前一个DIV变化*/
+		h6:only-child{background: red;}
+		/*匹配父元素使用同种标签的仅有一个子元素 列:h6：两个DIV都变化*/
+		h6:only-of-type{font-size: 1cm;}
+	</style>
+	<body>
+		
+	
+		<div>
+			<p>ss</p>
+			<p>ss</p>
+			<p>ss</p>
+		</div>
+		<div>
+			<p>ss</p>
+			<p>ss</p>
+			<p>ss</p>
+			
+		</div>
+		<div>
+			<h5>ooo</h5>
+			<h5>ooo</h5>
+			<h5>ooo</h5>
+			<h5>ooo</h5>
+			<h5>ooo</h5>
+			<h5>ooo</h5>
+			<h5>ooo</h5>
+			<h5>ooo</h5>
+			<h5>ooo</h5>
+			<h5>ooo</h5>
+		</div>
+		<div>
+			<h6>jjj</h6>
+		</div>
+		<div>
+			<h6>jjj</h6>
+			<div>sss</div>
+		</div>
+		
+	</body>
+</html>

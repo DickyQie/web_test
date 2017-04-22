@@ -25,14 +25,17 @@
 		}
 		/*第一行*/
 		div > p:first-line {color:#090;}
-		div > p::first-line {color:#090;}
 		
 		/*之前加元素*/
 		label:before{
-			content: "是";
+			content: "我";
+			color: red;
+			/*position: absolute;*/
 		}
 		/*之后加元素*/
-		label:after{content: "看到";}
+		label:after{content: "看到";
+			
+		}
 		
 		
 		/*选中元素*/
@@ -47,7 +50,7 @@
 			<p>今天，阳光明媚，晴空万里，非常适合户外活动，如踏青、远足之类的。长期坐在办公室的同学们要多注意运动。</p>
 		</div>
 		
-		<label>ssss<br />ssss</label>
+		<label>我的<br />ssss</label>
 		
 		<h1>选中下面的文字，看看它的颜色</h1>
 		<span>你选中这段文字后，看看它们的文本颜色和背景色，就能明白::selection的作用。</span>

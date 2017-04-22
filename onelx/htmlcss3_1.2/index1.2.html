@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>CSS3边框属性圆角</title>
+	</head>
+	<style type="text/css">
+		.one{
+			width: 100px;
+			height: 96px;
+			border: 2px solid blue;
+			-webkit-border-top-left-radius: 30px 30px;
+			-webkit-border-top-right-radius: 30px 30px;
+		}
+		.tow{
+			width: 100px;
+			height: 100px;
+			border: 2px solid blue;
+			-webkit-border-radius: 30px;
+		}
+		.tow1{
+			width: 100px;
+			height: 100px;
+			border: 2px solid blue;
+			-webkit-border-radius: 30px 60px;
+		}
+		.tow2{
+			width: 100px;
+			height: 100px;
+			border: 2px solid blue;
+			-webkit-border-radius: 30px 60px 90px;
+		}
+		.tow3{
+			width: 100px;
+			height: 100px;
+			border: 2px solid blue;
+			-webkit-border-radius: 30px 60px 90px 120px;
+		}
+		/*一个代表水平，一个代表垂直*/
+		.tow5{
+			width: 100px;
+			height: 100px;
+			border: 2px solid blue;
+			-webkit-border-radius: 30px 60px 90px 120px/30px 60px 90px 120px;
+		}
+		.tow4{
+			width: 100px;
+			height: 100px;
+			border: 2px solid blue;
+			-webkit-border-radius: 100px;
+		}
+	</style>
+	<body>
+		<div class="one"></div>
+		<div class="tow"></div>
+		<div class="tow1"></div>
+		<div class="tow2"></div>
+		<div class="tow3"></div>
+		<div class="tow5"></div>
+		<div class="tow4"></div>
+	</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>CSS3倒影加渐变</title>
+	</head>
+	<style type="text/css">
+	img{width: 125px;margin: 50px;}
+	/*底部倒影*/
+	.normal{-webkit-box-reflect: below initial;5px}
+	/*顶部*/
+	.top{-webkit-box-reflect: above;}
+	/*左边*/
+	.left{-webkit-box-reflect: left;}
+	/*right*/
+	.right{-webkit-box-reflect: right;}
+	/*文字倒影*/
+	p{font-size: 36px;-webkit-box-reflect: below -10px -webkit-linear-gradient(top,transparent 20%,#fff)}	
+	
+	.weter{-webkit-box-reflect: below 3px -webkit-linear-gradient(top,transparent 20%,#fff)}
+	</style>
+	<body>
+		<img class="normal" src="../img/xiner3.jpeg" /><hr />
+		<img class="top" src="../img/xiner3.jpeg" /><hr />
+		<img class="left" src="../img/xiner3.jpeg" /><hr />
+		<img class="right" src="../img/xiner3.jpeg" /><hr />
+		<div><p>你来看</p></div>
+		<img class="weter" src="../img/xiner3.jpeg" /><hr />
+		
+		
+	</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>CSS3结构性伪类选择器1</title>
+	</head>
+	<style type="text/css">
+		/*第一行*/
+		p:first-line{color: red;}
+		/*第一个字母*/
+		p:first-letter{
+			color: blue;
+			font-size: 1cm;
+		}
+		/*之前加元素*/
+		p:before{content: "hello";}
+		/*之后加元素*/
+		p:after{content: "this is a test";}
+		/**/
+		:root{background: gray;}
+		/*排除 .one反伪类*/
+		li:not(#tow){color: red;}
+		/*空的不显示*/
+		li:empty{display: none;}
+		/*href:到达目标改变背景*/
+		:target{background: green;}
+	</style>
+	
+	<body>
+		<p>ssss<br />ssss</p>
+		
+		<ul>
+			<li>aaaaa</li>
+			<li id="tow" class="one">aaaaa</li>
+			<li>aaaaa</li>
+			<li></li>
+			<li>aaaaa</li>
+		</ul>
+		
+		<!--到达 href中name的地方-->
+		<a href="#three">THREE</a>
+		<a href="#four">Four</a><br />
+		<br /><br /><br /><br /><br />
+		<br /><br /><br /><br /><br /><br /><br /><br />
+		<br /><br /><br /><br /><br /><br /><br />
+		<br /><br /><br /><br /><br /><br /><br />
+		<br /><br /><br /><br /><br /><br /><br /><br />
+		<a name="three">
+				mmmmmmmm<br />		
+				mmmmmmmm<br />	
+				mmmmmmmm<br />	
+		</a>
+			<a name="four">
+				hhhhhh<br />	
+				hhhhhh<br />	
+				hhhhhh<br />	
+				hhhhhh<br />	hhhhhh<br />	
+				hhhhhh<br />	
+		</a>
+	</body>
+</html>

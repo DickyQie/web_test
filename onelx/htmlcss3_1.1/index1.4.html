@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>CSS3结构性伪类选择器2</title>
+	</head>
+	<style type="text/css">
+	/*ul:first-child{}  设置不能找ul*/
+		
+		/*对父元素的所有同一级里的第一个元素*/
+		li:first-child{background: red;}
+		/*所有同一级里的最后一个元素*/
+		li:last-child{background: green;}
+		/*指定位置*/
+		li:nth-child(3){background: gold;}
+		/*奇偶数变换*/
+	/*	li:nth-child(even){background: gray;}
+		li:nth-child(odd){background:greenyellow}*/
+		/*倒数第二个：也可以加even和odd*/
+		li:nth-last-child(2){font-size: 1cm;}
+	</style>
+	
+	<body>
+		<ul>
+			<li>1aaaaa</li>
+			<li>2aaaaa</li>
+			<li>3aaaaa</li>
+		</ul>
+		<ul>
+			<li>1aaaaa</li>
+			<li>2aaaaa</li>
+			<li>3aaaaa</li>
+		</ul>
+		<ul>
+			<li>1aaaaa</li>
+			<li>2aaaaa</li>
+			
+		</ul>
+		
+	
+	
+	</body>
+</html>
+

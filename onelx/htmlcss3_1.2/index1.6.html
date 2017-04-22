@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>CSS3用户界面及透明，旋转属性</title>
+	</head>
+	<style>
+	
+	.test{overflow:auto;width:200px;height:100px;
+	/*垂直和水平滑动*/
+	resize:both;background:#eee;}
+	
+	textarea{resize: vertical;/*垂直*/}
+	.ones{
+		color: rgba(255,0,0,5);
+		background: rgb(0,0,255);
+		filter:alpha(opacity=40)
+	}
+	p{position: absolute;
+	top: 300px;left: 100px;width: 300px;background: red;
+	-webkit-transform: rotate(30deg);}
+	</style>
+
+<body>
+	<div class="ones">This is a Test</a>
+			<textarea cols="30" rows="5">可鼠标拖动大小</textarea>
+	</div>
+	<div class="test">
+		<ul>
+			<li>新闻列表</li>
+			<li>新闻列表</li>
+			<li>新闻列表</li>
+		</ul>
+	</div>
+		<p>This</p>
+		
+		<div>
+			
+			
+		</div>
+	</body>
+</html>

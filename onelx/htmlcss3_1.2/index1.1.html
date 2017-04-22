@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>CSS3属性</title>
+	</head>
+	<style type="text/css">
+	/*transform: rotate(10deg)直接设置不支持
+	 * 要用的加相应的前缀(在不同浏览器上才能显示，解决兼容性)
+	 * -webkit-transform: rotate(10deg);
+		-moz-transform: rotate(10deg);火狐
+		-ms-transform: rotate();IE
+		-o-transform:  Opera
+		transform:  W3C
+	 */
+		div p{margin-top: 25px;
+			width: 200px;height:39px;background: red;
+			-webkit-transform: rotate(10deg);
+			-moz-transform: rotate(10deg);
+			-ms-transform: rotate(10deg);
+			
+		}
+		.bor{
+			/*把图片切成9块 根据图片拉伸获取显示样式*/
+			width: 66px;height: 66px;
+			-webkit-border-image: url(../img/weixin.png) 27/27px repeat stretch;
+		}
+		
+		.bor:hover{
+			/*把图片切成9块 根据图片拉伸获取显示样式*/
+			width: 16px;height: 16px;
+			-webkit-border-image: url(../img/weixin.png)  no-repeat stretch;
+		}
+	</style>
+	<body>
+	<div><p>你来看</p></div>
+		<div class="bor">
+		</div>
+		
+	</body>
+</html>

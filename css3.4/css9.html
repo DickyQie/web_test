@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>CSS3 animation</title>
+	</head>
+	
+	<style type="text/css">
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+		img{display: block;}
+		.wrap{
+			border: 1px solid red;
+			width: 380px;
+			height: 565px;
+			margin: 0 auto;
+			position:relative;
+			top: 55px;
+			-webkit-animation-name: upD;
+			/*动画指定需要多少秒或毫秒完成*/
+			-webkit-animation-duration: 2s;
+			/*从开始到结束以相同的速度播放动画:*/
+			-webkit-animation-timing-function: linear;
+			
+			/*设置动画在启动前的延迟间隔。*/
+			-webkit-animation-delay: 2s;
+			
+			/*定义动画的播放次数。*/
+			/*-webkit-animation-iteration-count: 1;*/
+			
+			/*指定是否应该轮流反向播放动画。*/
+			-webkit-animation-direction: initial;
+			
+			/*规定当动画不播放时（当动画完成时，或当动画有一个延迟未开始播放时），
+			 * 要应用到元素的样式。*/
+			/*-webkit-animation-fill-mode: forwards;*/
+			
+			/* 	指定动画是否正在运行或已暂停。*/
+			/*animation-play-state: paused;*//*running*/
+		}
+			
+			@-webkit-keyfranes upD{
+				0%{
+					-webkit-transform: translateY(0);
+				}
+				50%{
+					-webkit-transform: translateY(20px);
+				}
+				100%{
+					-webkit-transform: translate(50px);
+				}
+			}
+			
+			.head{
+				border: 1px solid #008000;
+				position: absolute;
+				top: 10px;left: 0px;
+				z-index: 1;
+				-webkit-animation-name: rota_head;
+				-webkit-animation-duration: 2s;
+				-webkit-animation-timing-function: linear;
+				-webkit-animation-direction: initial;
+			}
+			
+			@-webkit-keyframes rota_head{
+				0%{
+					-webkit-transform: rotate(0);
+				}
+				50%{
+					-webkit-transform: rotate(-15deg);
+				}
+				100%{
+					-webkit-transform: rotate(0deg);
+				}
+			}
+			.eye_open{
+				position: absolute;
+				top: 25px;
+				left: 40px;
+				 webkit-animation:eye_open 2s linear infinite;
+			}
+			/*设置图片透明动画*/
+			@-webkit-keyframes eye_open{
+
+		     /* 0%{opacity:1;}
+		
+		      85%{opacity:1;}
+		
+		      90%{opacity:0;}     
+		
+		      100%{opacity:1;}   */
+
+			}
+			/*设置图片透明动画*/
+			@-webkit-keyframes eye_close{
+				
+				      0%{opacity:0;}
+				
+				      85%{opacity:0;}
+				
+				      90%{opacity:1;}     
+				
+				      100%{opacity:0;}   
+				
+			}
+
+			.eye_close{
+			
+			      position:absolute;
+			
+			      top:37px;
+			
+			      left:40px;   
+			
+			      -webkit-animation:eye_close 2s linear infinite;
+			
+				}
+				
+	</style>
+	<body>
+		<div class="wrap">
+			<div class="head">
+				<img src="../img/content2.jpg" />
+				<img src="../onelx/img/share_ic_launcher.png" class="eye_open"/>
+				<img src="../img/tj1.png" class="eye_close"/>
+			</div>
+		</div>
+		
+	</body>
+</html>

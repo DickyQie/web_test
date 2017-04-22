@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>CSS3属性选择器</title>
+	</head>
+	<style type="text/css">
+		/*CSS2*/
+		[title]{color: red;}
+		p[title]{color: gold;}
+		div[align=center]{color: blue;font-size: 1cm;}
+		p[class~=tow]{color: green; font-size: 15px;}
+		p[title~=mm]{font-size: 2cm;}
+		/*匹配所有多个连字号分隔的值，以其中开头的元素“zh”为准*/
+		h2[lang|=zh]{color: greenyellow;}
+		/*CSS3:^ 以什么开头 */
+		a[href^=index1]{color: red;}
+		a[href^=s]{color: gold;}
+		/*$:以什么元素结尾的*/
+		a[href$=q]{color: green;}
+		/* *:只要包含元素的*/
+		a[href*=zn]{color: blue;font-size: 22px;}
+	</style>
+	<body>
+		<p title="s">sss</p>
+		<pre title="s1">sss</pre>
+		<p>sss</p>
+		<p>sss</p>
+		<div title="s2">sss</div>
+		<div align="center">lll</div>
+		<p class="one tow">sss22</p>
+		<p title="this is mm">sss</p>
+		<h2 lang="zh-en">hello</h2>
+		<!--CSS3-->
+		<a href="index1.1.html">nini</a>
+		<a href="index1.1.html">nini</a><br />
+		<a href="ss">nini</a>
+		<a href="qqq">nini</a><br />
+		<a href="mznb">nini</a><br />
+	</body>
+</html>

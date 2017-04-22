@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>CSS3过度效果和动画</title>
+	</head>
+	<style type="text/css">
+		/*Html5尽量不要使用id和class  CSS2的属性   使用CSS的属性*/
+		/*过度效果transition*/
+		a{
+			-webkit-transition:padding 1s,color 1s,background-color 2s;
+		}
+		a:hover{
+			padding-left: 20px;
+			color: red;
+			background: green;
+		}
+		div{
+			width: 300px;height: 200px;position: absolute;top: 150px;
+			background: red;
+			overflow: hidden;
+		}
+		.one{
+			/*运行含动画效果*/
+			opacity: 0;/*透明*/
+			display: block;
+			font-weight: bold;height: 50px;
+			-webkit-animation: mzs 5s ease-out;
+			-webkit-animation-iteration-count: 3;
+		
+		}
+		.tow{
+			opacity: 0;/*透明*/
+			display: block;
+			font-weight: bold;height: 50px;
+			/*name tiem   由快到慢 延迟  无限此循环*/
+			-webkit-animation: fen 5s ease-out 5s 3;
+			
+		
+		}
+		@-webkit-keyframes mzs{
+		 /*from{opacity: 0;}
+			to{opacity: 1;}*/
+			0%{opacity: 0;-webkit-transform: translate(0px)}
+			20%{opacity: 0.2;-webkit-transform: translate(20px); color: blue;}
+			40%{opacity: 0.4;-webkit-transform: translate(40px)}
+			60%{opacity: 0.6;-webkit-transform: translate(60px)}
+			100%{opacity: 1;-webkit-transform: translate(180px)}
+		}
+		@-webkit-keyframes fen{
+			0%{opacity: 0;-webkit-transform: translate(0px)}
+			20%{opacity: 0.2;-webkit-transform: translate(20px)}
+			40%{opacity: 0.4;-webkit-transform: translate(40px)}
+			60%{opacity: 0.6;-webkit-transform: translate(60px)}
+			100%{opacity: 1;-webkit-transform: translate(180px)}
+		}
+		
+	</style>
+	<body>
+		<a href="index1.1.html">师德师风</a><br />
+		<a href="index1.1.html">师德师风</a><br />
+		<a href="index1.1.html">师德师风</a>
+		<div >
+			<span class="one">这文字会动1</span><br />
+			<span class="tow">这文字会动2</span>
+		</div>
+	</body>
+</html>

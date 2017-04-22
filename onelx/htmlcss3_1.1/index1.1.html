@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>CSS3关系选择器</title>
+	</head>
+	<style type="text/css">
+		/*1:多元素  逗号隔开*/
+		div,p{color: red;}
+		/*2:后代 */
+		div p{font-size: 1cm;}
+		/*3：子元素（必须下一代）*/
+		div>h3{color: royalblue;}
+		/*4：毗邻(和他相邻)匹配相邻pre元素之后的h4元素*/
+		pre+h4{color: gold;}
+		/*5：同级元素通用选择器 匹配任何b元素之后的h5元素*/
+		b~h5{color:green;}
+	</style>
+	<body>
+		<!--1-->
+	<div>Helllo world1</div>
+	<p>dd</p>
+	<!--2-->
+	<div><h1><p>Helllo world2</p></h1></div>
+	<!--3-->
+	<div><h3>Helllo world<3/h3></div>
+	<div><b><h3>Helllo world3</h3></b></div>
+	<!--4-->
+	<h4>Helllo world4</h4>
+	<pre>sss4</pre>
+	<h4>Helllo world4</h4>
+	<h4>Helllo world4.1</h4>
+	<!--5-->
+	<h5>Helllo world4</h5>
+	<b>sss5</b>
+	<h5>Helllo world4</h5>
+	<h5>Helllo world4</h5>
+	
+	</body>
+</html>

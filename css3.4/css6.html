@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	
+	<style type="text/css">
+		
+		/*.halfStyle{
+			position:relative;
+			display: inline-block;
+			font-size: 80px;
+			color: black;
+			overflow: hidden;
+			white-space: pre;/*规定段落中的文本不进行换行：*/
+		/*}
+		
+		.halfStyle:before{
+			display: block;
+			z-index: 1;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 50%;
+			content: attr(data-content) ; /* 伪元素的动态获取内容 */
+			/*overflow: hidden;
+	    	color: #FF0000;
+		}*/
+		
+		.halfStyle{
+			position: relative;
+			display: inline-block;
+			font-size: 80px;/* or any font size will work */
+			color: black;/* hide the base character */
+			overflow: hidden;
+			white-space: pre;/* to preserve the spaces from collapsing */
+		}
+		
+		.halfStyle:before {
+			display: block;
+			z-index: 1;
+			position: absolute;
+			top: 0;
+			width: 50%;
+			content: attr(data-content);
+			overflow: hidden;
+			color: red;
+			text-shadow: 2px -2px 0px #af0;
+		}
+		.halfStyle:after{
+			display: block;
+			direction: rtl;
+			position: absolute;
+			z-index: 2;
+			top: 0;
+			left: 50%;
+			width: 50%;
+			content: attr(data-content);
+			overflow: hidden;
+			color: #008000;
+			text-shadow: 2px 2px 0px goldenrod;
+		}
+		
+		.img_s{
+			margin-left: 155px;
+			/*
+			 above  向上
+			 below  向下倒影
+			 left  左边
+			 * */
+			-webkit-box-reflect:left 10px;/*向左和间距*/
+		}
+		
+		.img_s1{
+			-webkit-box-reflect: below 5px -webkit-linear-gradient(bottom,transparent 20%,#fff);
+		}
+		
+		div p{
+			margin-top: 150px;
+			font-size: 36px;-webkit-box-reflect: below -10px -webkit-linear-gradient(top,transparent 20%,#fff)}	
+
+	</style>
+	
+	<body>
+		<p>单个字符</p>
+		<span class="halfStyle lazy " data-content="风">风</span>
+		<span class="halfStyle lazy " data-content="流">流</span>
+		<span class="halfStyle lazy " data-content="倜">倜</span>
+		<span class="halfStyle lazy " data-content="傥">傥</span>
+		<hr/>
+		<p>用脚本自动美化：</p>
+		
+		<span class="textToHalfStyle lazy ">恋爱容易婚姻不易，且行且珍惜。</span>
+		
+		<br />
+		
+		<img src="../img/tj1.png" class="img_s" />
+		<br />
+		
+		<img src="../img/content2.jpg" class="img_s1" />
+		
+		
+		<div><p>你来看</p></div>
+		
+	</body>
+</html>

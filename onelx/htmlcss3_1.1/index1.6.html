@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>CSS3结构性伪类选择器4</title>
+	</head>
+	<style type="text/css">
+		/*可编辑*/
+		[type=text]:enabled{background: red;}
+		/*禁用*/
+		[type=text]:disabled{background: green;}
+		/*字体选择改变*/
+		::selection{color: red;}
+		
+	</style>
+	<body>
+		<form>
+			<input type="text" name="a" value="bbbb" />
+			<input type="text" name="a" disabled="disabled" value="bbbb" />
+			<input type="text" name="a" disabled="disabled" />
+			<input type="text" name="a" value="bbbb" />
+			<input type="text" name="a" value="bbbb" /><br />
+			<input type="radio" checked="checked" name="b"/>aaa
+			<input type="radio" name="b"/>aaa<br />
+		</form>
+	<div>你来看</div>
+	<div>你来看</div>
+	<div>你来看</div>
+	<div>你来看</div>
+		
+	</body>
+</html>
