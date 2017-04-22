@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<link rel="stylesheet" href="css/css1.css" />
+		<style type="text/css">
+			.wrap{
+				width: 1000px;
+				margin: 0px auto;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<h1>默认效果&lsaquo;&rsaquo;</h1>
+		<div class="wrap">
+			<div id="dowebok" class="fader">
+				<img class="slide" src="images/img1.jpg">
+		        <img class="slide" src="images/img2.jpg">
+		        <img class="slide" src="images/img3.jpg">
+		        <div class="fader_controls">
+		        	<div class="page prev" data-target = "prev">
+		        		&lsaquo;<!--<  称之为尖括号-->
+		        	</div>
+		        	<div class="page next" data-target = "next">
+		        		&rsaquo;<!--  >  称之为尖括号-->
+		        	</div>
+		        	<ul class="pager_list"></ul>
+		        </div>	
+		        	
+			</div>
+		</div>
+		<script src="js/jquery.min.js"></script>
+	    <script src="js/jquery.easyfader.js"></script>
+	<script>
+	$(function() {
+		$('#dowebok').easyFader();
+	});
+</script>
+
+	</body>
+</html>

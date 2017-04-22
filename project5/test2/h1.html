@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+	#tab_container1{width:600px;text-align:left;}
+		.cls_tab_nav{height:26px;overflow:hidden;font-size:12px;text-align:left;background:url(line_bg.jpg) repeat-x bottom;}
+		.cls_tab_nav ul{font-size:12px;margin:0;padding:0;}
+		.cls_tab_nav_li{background:url(tab_bg.jpg) no-repeat -157px 0;width:157px;height:26px;line-height:26px;float:left;display:inline;overflow:hidden;text-align:center;cursor:pointer;}
+		.cls_tab_nav_li_first{background-position:0px 0px;}
+		.cls_tab_nav_li a{text-decoration:none;color:#444;}
+		.cls_tab_body{border:1px solid #FFAE1E;border-top:none;min-height:320px;
+	}
+	</style>
+	<body>
+		<div id="tab_container2" style="width:472px;">
+			 <div class="cls_tab_nav">
+				  <ul>
+					   <li class="cls_tab_nav_li cls_tab_nav_li_first"><a href="#">选项卡1</a></li>
+					   <li class="cls_tab_nav_li"><a href="#">选项卡2</a></li>
+				  </ul>
+			 </div>
+			 <div class="cls_tab_body">
+				  <div class="cls_div" style="display:block;">选项卡1 <a href="http://www.divcss5.com/">DIVCSS</a></div>
+				  <div class="cls_div">选项卡2</div>
+			 </div>
+		</div>
+		<hr />
+		<div id="tab_container1">
+			 <div class="cls_tab_nav">
+			  <ul>
+				   <li class="cls_tab_nav_li cls_tab_nav_li_first"><a href="#">选项卡1</a></li>
+				   <li class="cls_tab_nav_li"><a href="#">CSS</a></li>
+				   <li class="cls_tab_nav_li"><a href="#">js</a></li>
+			  </ul>
+			 </div>
+			 <div class="cls_tab_body">
+				  <div class="cls_div" style="display:block;">选项卡1 <a href="http://www.divcss5.com/">CSS+DIV</a></div>
+				  <div class="cls_div">选项卡2</div>
+				  <div class="cls_div">http://www.divcss5.com</div>
+			 </div>
+		</div>
+		<hr />
+		</div>
+		<script type="text/javascript">
+			try{
+ document.execCommand("BackgroundImageCache", false, true);
+}catch(e){}
+function $(element){
+ if(arguments.length>1){
+  for(var i=0,elements=[],length=arguments.length;i<length;i++)
+   elements.push($(arguments[i]));
+  return elements;
+ }
+ if(typeof element=="string")
+  return document.getElementById(element);
+ else
+  return element;
+}
+var Class={
+ create:function(){
+  return function(){
+   this.initialize.apply(this,arguments);
+  }
+ }
+}//欢迎来到divcss5，我们的网址是www.divcss5.comjs就是js特效，本站收集大量高质量js代码，还有许多广告代码下载。
+Object.extend=function(destination,source){
+ for(var property in source){
+  destination[property]=source[property];
+ }
+ return destination;
+}
+var tabMenu=Class.create();
+tabMenu.prototype={
+ initialize:function(container,selfOpt,otherOpt){
+  this.container=$(container);
+  /*
+   利用Object的extend方法来实现对默认属性的覆盖.
+   如果初始化选项卡时,没有设置选项卡的属性,则默认属性
+  */
+  var selfOptions=Object.extend({fontWeight:"bold",fontSize:"12px",color:"#FFBC44"},selfOpt||{});
+  var otherOptions=Object.extend({fontWeight:"normal",fontSize:"12px",color:"#666"},otherOpt||{});
+  //用for循环得到objs数组,主要是为了兼容非IE浏览器把空白也当作子对象
+  for(var i=0,length=this.container.childNodes.length,objs=[];i<length;i++){
+   if(this.container.childNodes[i].nodeType==1)
+    objs.push(this.container.childNodes[i]);
+  }
+  var tabArray=objs[0].getElementsByTagName("li");
+  //用for循环得到divArray数组,主要是为了兼容非IE浏览器把空白也当作子对象
+  var divArray=new Array();
+  for(i=0,length=objs[1].childNodes.length;i<length;i++){
+   if(objs[1].childNodes[i].nodeType==1)
+    divArray.push(objs[1].childNodes[i]);
+  }
+ //欢迎来到divcss5，我们的网址是www.divcss5.com CSS网站
+  for(i=0,length=tabArray.length;i<length;i++){
+   tabArray[i].length=length;
+   tabArray[i].index=i;
+   tabArray[i].onmouseover=function(){
+    //其它选项卡样式设置
+    for(var j=0;j<this.length;j++){
+     tabArray[j].style.backgroundPosition="-"+tabArray[j].offsetWidth+"px 0";
+     for(var property in selfOptions){
+      tabArray[j].firstChild.style[property]=otherOptions[property];
+     }
+    }
+    //当前选项卡样式
+    this.style.backgroundPosition="0 0";
+    for(var property in selfOptions){
+     this.firstChild.style[property]=selfOptions[property];
+     /*
+      注意this.style.property和selfOptions.property的用法错误
+      style.fontWeight正确
+      style["fontWeight"]正确
+      style["font-weight"]错误
+     */
+    }
+    //隐藏其它选项卡
+    for(j=0;j<this.length;j++){
+     divArray[j].style.display="none";
+    }
+    //显示当前选项卡
+    divArray[this.index].style["display"]="block";
+   }
+  }
+ }
+}
+/*
+第一个参数是必选项,第二个参数是设置当前选项卡的样式,可选项,第三个参数是其它选项卡的样式.
+例如:
+var tab2=new tabMenu("tab_con2",{color:"##FFBC44",fontWeight:"bold",fontSize:"12px"});
+需要注意的是第二个和第三个参数的写法.
+因为直接用CSS的写法font-weight将导致JS(对象的属性命名)语法出错,所以只能用JS的写法.把CSS中的"-"去掉,而后"-"符号后面的单词的首子母大写.
+例如 font-size写成 fontSize, text-decoration写成textDecoration
+*///欢迎来到divcss5，我们的网址是www.divcss5.com CSS网站
+var tab1=new tabMenu("tab_container1",{fontSize:"14px",color:"#FFBC44",fontWeight:"bold"},{fontWeight:"normal",color:"#666"});
+var tab2=new tabMenu("tab_container2");
+var tab3=new tabMenu("tab_container3",{textDecoration:"underline"},{textDecoration:"none"});
+var tab4=new tabMenu("tab_container4",{fontWeight:"normal"});
+var tab5=new tabMenu("tab_container5");
+		</script>
+	</body>
+</html>

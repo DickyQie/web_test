@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		body,ul,li{
+			margin: 0px;
+			padding: 0px;
+			font-family: "微软雅黑";
+		}
+		a{
+			text-decoration: none;
+			
+		}
+		.nav{
+			width: 600px;
+			height: 30px;
+			margin: 0px auto;
+			background-color: greenyellow;
+			clear: both;
+		}
+		li{
+			list-style: none;
+			list-style-position: outside;
+			display: inline;
+			float: left;
+			text-align: center;
+		}
+		
+		.menu2{
+			margin: 5px;
+			width: 120px;
+			border: 1px solid #008000;
+			height: 20px;
+			overflow-y: hidden;
+			background-color: #F1FBEC;
+		}
+		.menu1{
+			width: 120px;
+			height: auto;
+			border: 1px solid #008000;
+			background-color: #F1FBEC;
+			cursor: hand;
+			opacity: 0.5;
+			-webkit-opacity: 0.5;
+			-moz-opacity: 0.5;
+			filter: Alpha(opacity=50);
+		}
+		.list{
+			width: 100px;
+			text-align: left;
+		}
+		.list a{
+			color: green;
+		}
+		.list a:hover{
+			color: white;
+			background: green;
+		    padding: 3px 3px 0px 20px;
+			float: left;
+			width: 88px;
+		}
+		
+	</style>
+	<body>
+		
+		<div class="nav">
+			<ul>
+				<li class="menu2" onmouseover="this.className='menu1'" onmouseout="this.className='menu2'">
+					HTML
+					<div class="list">
+						<a href="">首页</a><br />
+						<a href="">首页</a><br />
+						<a href="">首页</a><br />
+						<a href="">首页</a><br />
+						<a href="">首页</a><br />
+					</div>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>

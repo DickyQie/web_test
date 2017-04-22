@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>DIV CSS下拉菜单-DIVCSS5</title>
+
+
+<style type="text/css">
+	
+	.ddsmoothmenu { 
+		margin: 0px auto; 
+		font: 12px Verdana; 
+		width:730px;
+	} 
+	.ddsmoothmenu ul { 
+		padding: 0px;
+		background: #2b9801;
+		z-index: 100;
+		float: left;
+		margin: 0px;
+		list-style-type: none;
+	}
+	.ddsmoothmenu ul li{
+		display: block;
+		float: left;
+		width: 81px;
+		line-height: 31px;
+		position: relative;
+		text-align: center;
+	}
+	.ddsmoothmenu ul li a{
+		display: block;
+		font-weight: bold;
+		width: 81px;
+		text-decoration: none;
+	}
+	.ddsmoothmenu ul li a:hover{
+		color: #ffff00;
+	}
+	.ddsmoothmenu ul li ul{
+		left: 0px;
+		visibility: hidden;
+		position: absolute;
+	}
+	.ddsmoothmenu ul li ul li{
+		background: #2b9801;
+		float: left;
+		width: 81px;
+		line-height: 25px;
+		border-bottom: 1px solid #96d47d;
+	}
+	.ddsmoothmenu ul li ul li a{
+		display: block;
+		text-decoration: none;
+	}
+	.ddsmoothmenu ul li ul li a:hover{
+		background: #51b228;
+	}
+	
+
+
+
+
+
+
+</style>
+<script type="text/javascript">
+	function onover(textName){
+		document.getElementById(textName).style.visibility="visible";
+	}
+	function onout(textName){
+		document.getElementById(textName).style.visibility="hidden";
+	}
+</script>
+</head>
+<body>
+	<div class=ddsmoothmenu id=smoothmenu1>
+		<ul>
+			<li><a href="">css</a></li>
+			<li onmouseover="onover('comm')" onmouseout="onout('comm')"><a href="">DIV+CSS</a>
+				<ul id="comm">
+					<li><a href="">css手册</a> </li>
+					<li><a href="">css3手册</a> </li>
+					<li><a href="">CSS工具</a> </li>
+					<li><a href="">css教程</a> </li>
+					<li><a href="">css hack</a></li>
+					<li><a href="" title="css模板">css模块</a></li>
+				</ul>
+			</li>
+			<li onmouseover="onover('comm2')" onmouseout="onout('comm2')"><a href="">div css</a>
+				<ul id="comm2"> 
+					<li><a href="">div css基础</a> </li>
+					<li><a href="">html基础</a> </li>
+					<li><a href="">div css标准</a> </li>
+					<li><a href="">css验证</a> </li>
+					<li><a href="">w3c验证</a></li>
+				</ul>
+			</li>
+			
+			<li onmouseover="onover('comm3')" onmouseout="onout('comm3')"><a href="">CSS制作</a>
+				<ul id="comm3">
+					<li><a href="">div css重构</a> </li>
+						<li><a href="">css制作价格</a> </li>
+						<li><a href="">网页重构</a> </li>
+						<li><a href="">div切图</a> </li>
+						<li><a href="">div+css教程</a></li>
+				</ul>
+			</li>
+			<li onmouseover="onover('comm4')" onmouseout="onout('comm4')"><a href="">CSS切图</a>
+				<ul id="comm4">
+					<li><a href="">div+css切图</a> </li>
+					<li><a href="">css div切图</a> </li>
+					<li><a href="">css切图</a> </li>
+					<li><a href="">图片转div</a> </li>
+					<li><a href="">div css切图</a></li>
+				</ul>
+			</li>
+			<li onmouseover="onover('comm5')" onmouseout="onout('comm5')"><a href="">CSS切图</a>
+				<ul id="comm5">
+					<li><a href="">css2手册</a> </li>
+					<li><a href="">css3手册</a> </li>
+					<li><a href="">CSS在线手册</a> </li>
+					<li><a href="">css编辑器</a> </li>
+					<li><a href="">div</a></li>
+				</ul>
+			</li>
+			<li onmouseover="onover('comm6')" onmouseout="onout('comm6')"><a href="">CSS手册</a>
+				<ul id="comm6">
+					<li><a href="">css2手册</a> </li>
+					<li><a href="">css2手册</a> </li>
+					<li><a href="">css2手册</a> </li>
+					<li><a href="">css2手册</a> </li>
+					<li><a href="">css2手册</a> </li>
+				</ul>
+			</li>
+		
+		</ul>
+	</div>
+</body>
+</html>
