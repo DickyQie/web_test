@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>HTML5之新元素 内联 SVG</title>
+	</head>
+	<style type="text/css">
+		
+		svg{
+			background: gainsboro;
+		}
+	</style>
+	<body>
+		<!--http://www.w3cschool.cn/svg/   单独的课程-->
+		
+		SVG 是一种使用 XML 描述 2D 图形的语言。<br />
+		在 SVG 中，每个被绘制的图形均被视为对象。如果 SVG 对象的属性发生变化，那么浏览器能够自动重现图形。<br />
+		
+		<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="190" >
+			<!--两个数字为一组  1：上  2:左下角 3：右边  4：左边 5：右下角-->
+			<polygon points="100,10 40,180 190,60 10,60 160,180" style="fill:lime;stroke: purple; stroke-width: 5;fill-rule: evenodd;"></polygon>
+		</svg>
+		
+	</body>
+</html>

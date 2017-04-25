@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>H5 之Video</title>
+	</head>
+	<body>
+		<!--controls：设置视频提供播放控件 不设置 只能通过脚本来设置  选其一-->
+		<video width="320" height="240" controls="controls" poster="../img/tj1.png">
+			
+			<!--兼容各种视频格式-->
+			<source src="http://www.runoob.com/try/demo_source/movie.mp4" type="video/mp4"></source>
+			<source src="http://www.runoob.com/try/demo_source/movie.ogg" type="video/ogg"></source>
+			<source src="http://www.runoob.com/try/demo_source/movie.webm" type="video/webm"></source>
+			您的浏览器不支持Video标签。
+		</video>
+		
+		<div style="text-align: center; margin-top:25px ;">
+			<button onclick="playPause()">播放暂停</button>
+			<button onclick="makeBig()">放大</button>
+			<button onclick="makeSmall()">缩小</button>
+			<button onclick="makeNormal()">普通</button><br />
+			
+			<video id="video1" controls="controls" poster="../img/content2.jpg" width="420px">
+				<source src="http://www.runoob.com/try/demo_source/mov_bbb.mp4" type="video/mp4"></source>
+				<source src="http://www.runoob.com/try/demo_source/mov_bbb.ogg" type="video/ogg"></source>
+				<source src="http://www.runoob.com/try/demo_source/mov_bbb.webm" type="videowebm"></source>
+				您的浏览器不支持Video标签。
+			</video>
+		</div>
+		
+		<script>
+			var myVideo=document.getElementById("video1");
+			function playPause()
+			{
+				if(myVideo.paused){
+					myVideo.play();
+				}
+				else{
+					myVideo.pause();
+				}
+			}
+			
+			function makeBig(){
+				myVideo.width=560;
+			}
+			function makeSmall()
+			{
+				myVideo.width=320;
+			}
+			function makeNormal(){
+				myVideo.width=420;
+			}
+		</script>
+		
+	</body>
+</html>

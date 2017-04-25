@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		#marquee{
+			margin: 100px auto;
+			width: 400px;
+			perspective: 500px;
+			-webkit-perspective: 500px;
+			font-size: 0px;
+		}
+		#marquee div{
+			display: inline-block;
+			height: 120px;
+			width: 200px;
+			position: relative;
+		}
+		#marquee div:first-of-type{
+			background: #e5233e;
+			-webkit-transform-origin: top right;
+			transform-origin: top right;
+			-webkit-transform: rotateY(-40deg);
+			transform: rotateY(-40deg);
+			color: #f5c9d9;
+		}
+		
+		#marquee div:last-of-type{
+			background: #b31e31;
+			transform-origin: top left;
+			-webkit-transform-origin: top left;
+			-webkit-transform: rotateY(45deg);
+			transform: rotateY(45deg);
+			color: #f8c9d9;
+		}
+		#marquee div{
+			font-size: 40px;
+			overflow: hidden;
+		}
+		#marquee div span{
+			position: absolute;
+			width: 400%;
+			line-height: 3;
+		}
+		
+		
+		
+		
+				
+	</style>
+	<body>
+		<div id="marquee">
+			<div>
+				<span>素材家园网页特效代码</span>
+			</div>
+			<div aria-hidden="true">
+				<span>素材家园网页特效代码</span>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>H5 Input新类型</title>
+	</head>
+	<body>
+		<p>HTML5 拥有多个新的表单输入类型。这些新特性提供了更好的输入控制和验证。并不是所有的主流浏览器都支持新的input类型</p>
+		
+		<p>Color类型:点击出现颜色选择器  选取需要的颜色</p>
+		<input type="color" name="favcolor"/>
+		
+		
+		<p>date类型:点击出现日期选择器  火狐低版本不支持</p>
+		<input type="date" name="time"/>
+		
+		
+		<p>datetime类型:点击出现一个日期和时间控制器  低版本不支持</p>
+		<input type="datetime" name="times"/>
+		
+		
+		<p>datetime-local类型:点击出现一个日期和时间控制器  火狐低版本不支持</p>
+		<input type="datetime-local" name="times"/>
+		
+		<p>email类型:交表单时，会自动验证 email 域的值是否合法有效  Internet Explorer 9 及更早 IE 版本不支持</p>
+		<p>required表示必须输入</p>
+		<form action="h1.html">
+			<input type="email" name="times" required="required"/>
+			<input type="submit"> 
+		</form>
+		
+		
+		<p>month类型:点击出现一个日期控制器==选择一个月份  火狐低版本不支持</p>
+		<input type="month" name="times"/>
+		
+		
+		<p>number类型:用于应该包含数值的输入域  IE 9 低版本不支持</p>
+		1-9：<input type="number" name="times" min="1" max="9" step="2"/>
+		
+		
+		<p>range:用于应该包含一定范围内数字值的输入域   显示为滑动条</p>
+		<input type="range" name="times" min="1" max="10" value="5"/>
+		
+		
+		<p>search类型：用于搜索域</p>
+		Search Google：<input type="search">
+			
+		
+		<p>tel类型：电话号码字段  目前都不支持</p>
+		Tel：<input type="tel">
+			
+			
+		<p>time类型：选择一个时间  火狐或低版本不支持</p>
+		<input type="time">
+			
+			
+		<p>url类型：应该包含 URL 有效地址的输入域</p>
+		<form action="h1.html">
+			<input type="url" placeholder="输入有效的url">
+			<input type="submit"> 
+		</form>
+		
+		
+		<p>week类型：允许你选择周和年  火狐或低版本不支持</p>
+		<input type="week">
+	</body>
+</html>

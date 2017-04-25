@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>HTML5 表单元素</title>
+	</head>
+	<body>
+		<p>datalist：规定 form 或 input 域应该拥有自动完成功能。</p>
+		
+		<form action="h1.html" method="get">
+			<input list="browsers" name="browser" />
+			<datalist id="browsers">
+				<option value="a"></option>
+				<option value="bbb"></option>
+				<option value="vvvvv"></option>
+				<option value="cccccc"></option>
+			</datalist>
+		</form>
+		
+		<p>keygen:用于表单的密钥对生成器字段,当提交表单时，会生成两个键，一个是私钥，一个公钥。
+			私钥（private key）存储于客户端，公钥（public key）则被发送到服务器。
+			公钥可用于之后验证用户的客户端证书（client certificate）。</p>
+		
+		<form action="h1.html" method="get">
+			<input type="text" name="user" />
+			<keygen name="security"><!--得到这样的：MIIBOjCBpDCBnzANBgkqhkiG9w0BAQEFAAOBjQAw-->
+				<input type="submit" />
+		</form>
+		
+		
+		<p>output:用于不同类型的输出，比如计算或脚本输出：</p>
+		
+		<form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+			0<input type="range" id="a" value="50">100+
+			<input type="number" id="b" value="50" >
+			=<output name="x" for="a b"></output>
+		</form>
+		
+	</body>
+</html>
