@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>HTML5 WEB SQL数据库</title>
+	</head>
+	<body>
+		<p>Web SQL 数据库 并不是 HTML5 规范的一部分，但它是一个独立的规范，引入了一组使用 SQL 操作客户端数据库的 APIs。</p>
+		<p>最新版浏览器支持</p>
+		<p>核心的三个方法</p>
+		<p>1：openDatabase：使用现有的数据库或者新建的数据库创建一个数据库对象</p>
+		<p>2：transaction:让我们能够控制一个事务，以及这种情况执行提交或者回滚</p>
+		<p>2：execute SQL：用于执行十几的SQL查询</p>
+		
+		<p>打开数据库：使用openDatabase()方法来打开已存在的数据库，如果数据库不存在，ze会创建一个新的数据库
+		</p>
+		
+		<p>var db=openDatabase('mydb','1.0','Test DB',2*1024*1024);</p>
+		<p>参数说明：</p>
+		<p>1:数据库名称</p>
+		<p>2:版本号</p>
+		<p>3:描述文本</p>
+		<p>4:数据库大小</p>
+		<p>5:创建回调 (创建回调在创建数据库后被调用)</p>
+		
+		
+		
+		<p>完整实例</p>
+		<div id="status" name="status">状态信息</div>
+		<p id="delete"></p>
+		<p id="update"></p>
+		<p id="select"></p>
+		<p id="select1"></p>
+		<input type="button" onclick="show()" value="查询"/>
+		<script type="text/javascript">
+      
+	      var db=openDatabase('mydb','1.0','Test DB',2*1024*1024);
+	      var msg;
+	      db.transaction(function (tx){
+	      	tx.executeSql('create table if not exists logs(id unique,log)');
+	      	tx.executeSql('insert into logs (id, log) values(1,"菜鸟")');
+	      	tx.executeSql('insert into logs (id, log) values(2,"zhang")');
+	      	tx.executeSql('insert into logs (id, log) values(3,"小不点")');
+	      	msg='数据表创建,添加两条数据';
+	      	document.querySelector('#status').innerHTML=msg;
+	      	console.log(msg);
+	      });
+	      
+	      db.transaction(function (tx){
+	      	tx.executeSql('delete from logs where id=1');
+	      	msg='删除了id==1的数据';
+	      	document.querySelector('#delete').innerHTML=msg;
+	      	console.log(msg);
+	      });
+        
+        db.transaction(function (tx){
+        	tx.executeSql('update logs set log=\'zhangqie\' where id=2');
+        	msg='更新了数据';
+        	document.querySelector('#update').innerHTML=msg;
+        	console.log(msg);
+        });
+        
+        function show(){
+	        db.transaction(function (tx){
+	        	tx.executeSql('select * from logs', [], function(tx,results){
+	        		var len=results.rows.length;
+	        		console.log(len);
+	        		msg="查询数据条数："+len;
+	        		document.querySelector('#select').innerHTML=msg;
+	        		for(var i=0;i<len;i++){
+	        			msg=results.rows.item(i).log;
+	        			document.querySelector('#select1').innerHTML+=msg;
+	        			console.log(msg);
+	        		}
+	        	},null);
+	        });
+	    }
+        
+        
+      </script>
+      
+      
+	</body>
+</html>

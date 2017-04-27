@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<meta charset="utf-8"> 
+		<title>H5 Web Workers</title> 
+	</head>
+<body>
+	<p>web worker是运行在后台的JavaScript，不影响页面的性能
+	
+	<p>web worker 是运行在后台的 JavaScript，独立于其他脚本，不会影响页面的性能。您可以继续做任何愿意做的事情：点击、选取内容等等，而此时 web worker 在后台运行。</p>
+
+	<p>以一个计数的实例来描述(IE9之前不支持)</p>
+	
+	<p>计数：<output id="result"></output></p>
+	<button onclick="start()">开始</button>
+	<button onclick="stop()">暂停</button>
+		
+	<script>
+		var w;
+		function start(){
+			if(typeof(Worker)!=="undefined"){
+				if(typeof(w)=="undefined")//检测是否支持Web Worker
+				{
+					//创建 Web Worker对象，，然后运行 "demo_workers.js" 中的代码
+					w=new Worker('demo_workers.js');
+				}
+				/**
+				 * 然后我们就可以从 web worker 发生和接收消息了。
+向 					web worker 添加一个 "onmessage" 事件监听器：
+				 */
+				w.onmessage=function(event){
+					document.getElementById("result").innerHTML=event.data;
+				};
+			}else{
+				document.getElementById("result").innerHTML="浏览器不支持 Web Workers";
+			}
+		}
+		
+		function stop(){
+			//如需终止 web worker，并释放浏览器/计算机资源，请使用 terminate() 方法：
+			w.terminate();
+			w=undefined;
+		}
+	</script>
+	
+</body>
+</html>

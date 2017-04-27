@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>HTML5 语义元素</title>
+		<!--兼容IE8及低版本浏览器-->
+		<!--[if lt IE 9]>
+			<script src="html5shiv.min.js"></script>
+		<![endif] -->
+	</head>
+	<style type="text/css">
+		header,nav,section,article,aside,footer,figure{
+			display: block;/*兼容浏览器*/
+		}
+	</style>
+	<body>
+		<p>语义==意义</p>
+		<p>语义元素：一个语义元素能够清楚的描述其意义给浏览器和开发者</p>
+		<p>无语义：div  span</p>
+		
+		<p>有语义：form table img </p>
+		
+		<p>H5提供了新的语义元素来明确WEB页面的不同部分</p>
+		<p>header(头部) , nav(导航栏) section(章节)  article(定义独立的内容) 
+			asied(侧边栏)， footer(底部)，figcaption  figure</p>
+		<img src="../img/bb.png" /><br />
+		
+		
+		
+		<p>section(部分):定义文档中的节(区段)。比如：章节，页眉</p>
+		<p>section包含了一组内容和标题</p>
+		<section>
+			<h1>WWF</h1>
+			<p>The World Wide Fund section section</p>
+		</section>
+		
+		
+		
+		<p>article(文章artikl):定义独立的内容</p>
+		<article>
+			<h1>IE9</h1>
+			<p>IE9是在2011-03-05发布的</p>
+		</article>
+		
+		
+		
+		<p>nav(导航):定义导航链接部分，并不是所有都在其中</p>
+		<nav>
+			<a href="h1.html">HTML</a>
+			<a href="h1.html">CSS</a>
+			<a href="h1.html">JavaScript</a>
+			<a href="h1.html">JQuery</a>
+		</nav>
+		
+		
+		
+		<p>aside(旁边 asaid)：定义页面主区域以外的内容(如侧边栏)，aside标签的内容与主区域内容相关</p>
+		<aside>
+			<h3>Epcot Center</h3>
+			<p>aside aside aside aside</p>
+		</aside>
+		
+		
+		
+		<p>header：描述文档的头部区域，用于定义内容的介绍展示区域，可以使用多个</p>
+		<article>
+			<header>
+				<h1>IE9</h1>
+				<p><time pubdate="2011-03-15"></time></p>
+			</header>
+			<p>Windows IE9是2011年3月14号发布的。</p>
+		</article>
+		
+		
+		<p>footer(页尾，底部):描述文档的底部区域，如：一个页脚通常包含文档的作者，著作权信息，联系信息等</p>
+		<p>文章中可以使用多个footer</p>
+		<footer>
+			<p>Posted by</p>
+			<p>footer footer footer footer</p>
+		</footer>
+		
+		
+		
+		<p>figure(数字，外形，形状，figer)：规定独立的流内容(图像，图表，照片，代码等)</p>
+		<p>figure元素的内容该与主内容相关，删除，对文档无影响</p>
+		<p>figcaption：定义figure 元素的标题</p>
+		<p>元素应该放置于 “figure” 元素的第一个或最后一个子元素的位置</p>
+		
+		<figure>
+			<img src="../img/content2.jpg" width="304" height="228" />
+			<figcaption>
+				Figure figure figure figure figcaption figcaption figcaption
+			</figcaption>
+		</figure>
+		
+		
+		<p>
+			以上除了figcaption都是块元素，为了这些块级元素在所有浏览器都生效，需要在样式表中设置
+			header，section，nav,footer,figure,aside,article{
+				display:block;
+			}
+		</p>
+		
+		
+		
+		<p>IE8及更早版本不支持，需要通过JS来解决兼容问题</p>
+		
+		<p>下载得到html5shiv.min.js文件：兼容IE8及低版本浏览器</p>
+		
+		<p>在浏览器小于IE9版本时会加载html5shiv.js文件. 你必须将其放置于<head> 元素中，因为 IE浏览器需要在头部加载后渲染这些HTML5的新元素</p>
+		
+		<p>
+			如下代码
+			[if lt IE 9]>
+				< script src="html5shiv.js">/script>
+				<  ![endif] 
+		</p>
+		
+		
+		
+	</body>
+</html>

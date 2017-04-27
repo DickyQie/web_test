@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>H5 Web存储</title>
+	</head>
+	<body>
+		<p>web存储：一个比cookie更好的本地存储方式</p>
+		<p>早期：cookie，但是Web 存储需要更加的安全与快速. 这些数据不会被保存在服务器上，
+			但是这些数据只用于用户请求网站数据上.它也可以存储大量的数据，而不影响网站的性能.
+			数据以 键/值 对存在, web网页的数据只允许该网页访问使用。
+		</p>
+		
+		<p>浏览器：Internet Explorer 8+, Firefox, Opera, Chrome, 和 Safari支持Web 存储。</p>
+		
+		
+		<p>存储数据的两个对象：<br />
+			localStorage：没有时间限制的数据存储<br />
+			sessionStorage：针对一个session的数据存储		
+		</p>
+		
+		
+		
+		<p>localStorage：对象存储数据没有时间限制，永久</p>
+		<div id="result"></div>
+		<script>
+			if(typeof(Storage)!=="undefined"){//验证浏览器是否支持web存储
+				//key：keys  value:切切歆语
+				localStorage.keys="切切歆语";
+				document.getElementById("result").innerHTML="网站名："+localStorage.keys;
+			}
+			else{
+				document.getElementById("result").innerHTML='浏览器不支持web存储';
+			}
+			
+			//localStorage.removeItem("key");//删除指定的缓存信息
+		</script>
+		
+		<p>localStorage和sessionStorage都有以下几个常用的，(以localStorage为列)</p>
+		<p>1：保存数据：localStorage.setItem(key,value);</p>
+		<p>2：读取数据：localStorage.getItem(key);</p>
+		<p>3：删除单个数据：localStorage.removeItem(key);</p>
+		<p>4：删除多个数据：localStorage.clear();</p>
+		<p>5：得到某个索引：key:localStorage.key(index);</p>
+		
+		
+		<p>键/值对通常以字符串存储，你可以按自己的需要转换该格式。</p>
+		
+		<script>
+			function clickCounter()
+			{
+				console.log("1");
+				if(typeof(Storage)!=="undefined"){
+					if(localStorage.count){
+						localStorage.count=Number(localStorage.count)+1;
+					}else{
+						localStorage.count=1;
+					}
+					document.getElementById("demo").innerHTML="点击了"+localStorage.count+"次";
+				}
+				else{
+				document.getElementById("demo").innerHTML="浏览器不支持Web存储";
+				}
+			}
+		</script>
+		
+		<p><button onclick="clickCounter()" type="button">点我</button></p>
+		<div id="demo">
+			按时
+		</div>
+		<p>点击该按钮查看计数器的增加。
+		 关闭浏览器选项卡(或窗口),重新打开此页面,计数器将继续计数(不是重置)。</p>
+		
+		
+		
+		<p>sessionStorage：针对一个session进行数据存储,当关闭浏览器数据会被删除</p>
+		<script>
+			function clickCount(){
+				if(typeof(Storage)!=="undefined"){
+					if(sessionStorage.count){
+						console.log(sessionStorage.count);
+						sessionStorage.count=Number(sessionStorage.count)+1;
+					}else{
+						sessionStorage.count=1;
+					}
+					document.getElementById("sessioncount").innerHTML="点击了"+sessionStorage.count+"次";
+				}
+				else{
+					document.getElementById("sessioncount").innerHTML="浏览器不支持";
+				}
+			}
+		</script>
+		
+		<p><button onclick="clickCount()" type="button">session计数</button></p>
+		<div id="sessioncount">
+			
+		</div>
+		<p>点击该按钮查看计数器的增加。</p>
+		<p>关闭浏览器选项卡(或窗口),重新打开此页面,计数器将从新计数(不是重置)。</p>
+		
+		
+		
+		
+		<p style="margin-top: 25px;">简单网站列表 Web存储</p>
+		<div style="width: 300px; height: 200px; text-align: center; border: 1px solid red;">
+			<label for="sitname">网站名(key)：</label>
+			<input type="text" id="sitname" class="text"/>
+			<br />
+			<label for="url">网站(value)：</label>
+			<input type="text" id="urls"  placeholder="输入url" required="required" />
+			<br />
+			<input type="button" onclick="save()" value="添加" />
+			<br />
+			<hr />
+			<label>输入网站名</label>
+			<input type="text" id="keys" placeholder="key" required="required"/>
+			<br />
+			<input type="button" onclick="find()" value="查询" />
+			 <p id="find_result"><br/></p>  
+		</div>
+		<div id="list">  
+    	</div>  
+    	<script>
+    		loadAll();
+    		function loadAll(){
+    			var lisr=document.getElementById("list");
+    			if(localStorage.length>0){
+    				var result="<table border='1'>";
+    				result+="<tr><td>网站名</td><td>网址</td></tr>";
+    				for(var i=0;i<localStorage.length;i++){
+    					var name=localStorage.key(i);
+    					var urls=localStorage.getItem(name);
+    					result+="<tr><td>"+name+"</td><td>"+urls+"</td></tr>";
+    				}
+    				result+="</table>";
+    				lisr.innerHTML=result;
+    			}
+    			else{
+    				LinkStyle.innerHTML="数据为空";
+    			}
+    		}
+    		
+    		//保存数据
+    		function save(){
+    			var zname=document.getElementById("sitname").value;
+    			var zurl=document.getElementById("urls").value;
+    			if(typeof(Storage)!=="undefined"){
+    				localStorage.setItem(zname,zurl);
+    				window.alert("添加成功");
+    			}
+    			else{
+    				window.alert("添加失败");
+    			}
+    		}
+    		
+    		//查询数据
+    		function find(){
+    			var search_site=document.getElementById("keys").value;
+    			var sitname=document.getElementById("find_result");
+    			sitname.innerHTML=search_site+"的网址是："+localStorage.getItem("zhang");
+    		}
+    		
+    	</script>
+    	
+    	
+    	<!--JSON  对象的-->
+    	
+	</body>
+</html>

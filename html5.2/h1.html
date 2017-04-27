@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>H5之新表单的属性</title>
+	</head>
+	<body>
+		<p>包含了form和input的属性
+		
+		<p>form input 的autocomplete属性</p>
+		<p>autocomplete：规定form和input拥有自动完成功能，属性有可能在form元素中是开启的，而在input中是关闭的</p>
+		
+		<form action="h1.html" autocomplete="on">
+			Name1:<input type="text" name="f"/><br />
+			Name2:<input type="text" name="l"/><br />
+			E-mail:<input type="email" name="email" autocomplete="off" /><br />
+			<input type="submit" />
+		</form>
+		<p>填写提交表单，重新刷新界面输入与上次的相同是则自动填充内容</p>
+		<p>autocomplete在form  为打开，  在 email 处关闭 所以Email没有自动完成文本框功能</p>
+		
+		
+		
+		<p style="margin-top: 25px;">form 的novalidate</p>
+		<p>novalidate是一个boolean属性，规定在提交表单时不验证form或input</p>
+		<p>下案例表示不验证邮箱，即可提交</p>
+		<form action="h1.html" novalidate="novalidate">
+			E-mail:<input type="email" name="s" />
+			<input type="submit" />
+		</form>
+		
+		
+		
+		
+		<p>input的autofocus : 是一个boolean类型，在页面加载加载时自动获取焦点</p>
+		<form action="h1.html">
+			Name1：<input type="text" name="f" autofocus="autofocus">
+			Name2: <input type="text" name="l" />
+			<input type="submit" />
+		</form>
+		
+		
+		
+		<p>input的form属性：规定输入域所属的一个或多个表单，如：在form表单外 input 引用了form 他也是form的一部分 也可以提交</p>
+		
+		<form action="h1.html" id="form1" method="get">
+			NAME：<input type="text" name="s" /><br />
+			<input type="submit" />
+		</form>
+		<input type="text" form="form1" name="ll"/>
+		
+		
+		
+		<p>input formaction属性：用于描述表单的action属性 ，属性会覆盖form 的action属性 用于 type=submit 和 type=image</p>
+		
+		<form action="../html5.1/h9.html" method="get">
+			 Name：<input type="text" name="name" />
+			<input type="submit" value="提交" />
+			<input type="submit" formaction="h1.html" />
+		</form>
+		
+		
+		<p>input formenctype:描述表单提交到服务器的数据编码（只对form 的method=post 有效） 覆盖form的enctype属性 用于 type=submit 和 type=image</p>
+		
+		<form action="h1.html" method="post">
+			<input type="text" name="s"/>
+			<input type="submit" />
+			<input type="submit" formenctype="multipart/form-data">
+		</form>
+		
+		
+		<p>input formmethod属性，表示提交表单的方式，覆盖form的method属性  用于 type=submit 和 type=image</p>
+		<form action="h1.html" method="get">
+			<input type="text" name="a">
+			<input type="submit" value="提交" />
+			<input type="submit" formmethod="post">
+		</form>
+		
+		<p>input formnovalidate:boolean属性 描述input提交表单时无需验证  覆盖form的novalidate属性</p>
+		<form action="h1.html">
+			<input type="email" name="a"/>
+			<input type="submit" value="提交" />
+			<input type="submit" formnovalidate="formnovalidate" />
+		</form>
+		
+		
+		<p>input formtarget:属性指定表单提交数据后的网页展示（如：新建，在当前页）覆盖form的target属性</p>
+		<form action="h1.html">
+			<input type="text" name="f" />
+			<input type="submit" />
+			<input type="submit" formtarget="_blank" />
+		</form>
+		
+		
+		<p>input height和width 用于image类型的input标签的宽高 （如果没设置，浏览器不知道图像大小，则不能预留适当的空间，加载过程中会页面布局改变</p>
+		<input type="image" src="../img/content2.jpg" alt="s" width="50" height="35" />
+		
+		
+		<p>input list:规定输入域datalist</p>
+		<input list="list" name="s"/>
+		<datalist id="list">
+			<option>IE</option>
+		 	<option value="Firefox">
+		  	<option value="Chrome">
+		  	<option value="Opera">
+		  	<option value="Safari">
+		</datalist>
+		
+		
+		<p>input min max:用于数字和日期的input类型的约束</p>
+		<input type="number" min="1" max="5" placeholder="范围：1-5">
+			
+			
+		<p>input multiple属性：boolean，允许input 可选择多个之（多张图片）</p>
+		<input type="file" multiple="multiple">
+			
+			
+		<p>input pattern属性描述了一个正则表达式用于验证input元素的值。(有text，search，url,tel,email,password等)</p>
+		<form action="h1.html">
+			<input type="text" name="code" pattern="[A-Za-z]{3}" />
+			<input type="submit" />
+		</form>
+	
+		
+		<p>input placeholder:提供一种提示(hint),描述所期待的值</p>
+		<input type="text" placeholder="请输入用户名">
+	
+		
+		<p>input required:boolean 表示必须填写</p>
+		<form action="h1.html">
+			<input type="text" name="s" required="required"/>
+			<input type="submit" />
+		</form>
+		
+		<p>input step:表示规定的合法数字的间隔</p>
+		<input type="number" step="3" />
+		
+		
+		
+	</body>
+</html>
