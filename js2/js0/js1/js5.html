@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>JS函数  字符串</title>
+	</head>
+	<body>
+		<p>函数是由事件驱动的或者当它被调用时执行的可重复使用的代码块。</p>
+		<p>和Java的一样</p>
+		<script>
+			//全局变量:在函数外声明的变量是全局变量，网页上的所有脚本和函数都能访问它。
+			var a=1;
+			function show()
+			{
+				//局部变量:只能在函数内部访问它
+				var n=2;
+				//一个函数
+			}
+			
+		</script>
+		
+		
+		<p>字符串</p>
+		<script>
+			//长度：length
+			//转义字符
+			document.write("a \"this\"  b");
+			
+			//字符串也可以是对象
+			//不要创建 String 对象。它会拖慢执行速度，并可能产生其他副作用：
+			var x='a';
+			var y=new String("a");
+			document.write("<br />"+typeof x +"  "+typeof y);
+		</script>
+		
+		<div id="">
+			<p>字符串的属性和方法请看图：</p>
+			<img src="../img/a.png" />
+		</div>
+	</body>
+</html>

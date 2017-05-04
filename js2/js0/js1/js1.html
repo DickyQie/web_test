@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>w3school教程  简介</title>
+	</head>
+	<body>
+		<p>网络脚本语言</p>
+		<p>被数百万计的网页用来改进设计、验证表单、检测浏览器、创建cookies，以及</p>
+		<p>JS是一种轻量级的编程语言</p>
+		
+		<script type="text/javascript">
+			document.write("<p>这是一个段落</p>");		
+		</script>
+		
+		<input type="button" name="" onclick="alert('欢迎')" id="" value="点我" />
+		
+		<p id="demo">ll</p>
+		<script type="text/javascript">
+			var x=document.getElementById("demo");
+			x.innerHTML="hello";
+			x.style.color="red";
+			
+			function changImage()
+			{
+				var img=document.getElementById("img");
+				if(img.src.match("bulbon")){
+					img.src="../img/pic_bulboff.gif";
+				}
+				else{
+					img.src="../img/pic_bulbon.gif";
+				}
+			}
+		</script>
+		
+		<!--变换灯泡-->
+		<img src="../img/pic_bulboff.gif" width="100" height="80" id="img" onclick="changImage()">
+	
+		
+	
+	</body>
+</html>

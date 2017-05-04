@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>EventListener</title>
+	</head>
+	<body>
+		<p> addEventListener() 方法用于向指定元素添加事件句柄。<br />
+
+			addEventListener() 方法添加的事件句柄不会覆盖已存在的事件句柄。<br />
+
+			你可以向一个元素添加多个事件句柄。</p>
+		<button id="btn">点我</button>
+		<script>
+			document.getElementById("btn").addEventListener("click",show);
+			document.getElementById("btn").addEventListener("click",show2);
+			document.getElementById("btn").addEventListener('mouseout',show3);
+			
+			// IE 8 及更早 IE 版本，Opera 7.0及其更早版本不支持 addEventListener() 和 removeEventListener() 方法。
+			//但是，对于这类浏览器版本可以使用 detachEvent() 方法来移除事件句柄:
+			//移除由 addEventListener() 方法添加的事件句柄:
+			//document.getElementById("btn").removeEventListener("mouseout", show3);
+			function show(){
+				alert("a");
+			}
+			function show2(){
+				alert("b");
+			}
+			function show3(){
+				alert("3");
+			}
+			
+		</script>
+		
+		<p style="margin-top: 35px;">JavaScript HTML DOM 元素(节点)</p>
+		<p>创建html</p>
+		<div id="div1">
+			<p id="p1">这是一个段落。</p>
+			<p id="p2">这是另一个段落。</p>
+		</div>		
+
+		<script>
+			var para=document.createElement("p");
+			var node=document.createTextNode("这是一个新段落。");
+			para.appendChild(node);
+			
+			var element=document.getElementById("div1");
+			element.appendChild(para);
+		</script>
+		
+		
+		<p>删除Html</p>
+		<!--<header id="div0">
+			<p id="p1">这是一个段落。</p>
+			<p id="p2">这是另一个段落。</p>
+		</header>
+		<script>
+			var parent=document.getElementById("div0");
+			var child=document.getElementById("p1");
+			parent.removeChild(child);
+		</script>-->
+
+	</body>
+</html>

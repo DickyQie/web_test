@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>JS变量,数据类型 , js对象</title>
+	</head>
+	<body>
+		<p>变量：存储信息的容器，弱类型的</p>
+		<p>命名规则：字母开头，大小写敏感</p>
+		<script>
+			var a="a";//可以双引号  也可以单引号  相同的
+			//声明多个 逗号隔开；
+			var b=1,c=2,d=3;
+			var f;//无值是   ==undefined
+			
+			//重新声明 JavaScript 变量
+			/*如果重新声明 JavaScript 变量，该变量的值不会丢失：
+			在以下两条语句执行后，变量 carname 的值依然是 "Volvo"：*/
+			var carname="a";
+			var carname;
+		</script>
+		
+		
+		
+		
+		<p>数据类型</p>
+		<p>number(数字)  String(字符串) boolean(布尔) Array (数组) Object(对象) null(空) undefined（未定义）</p>
+		<script>
+			//数组:
+			var a=new Array();
+			a[0]=1;
+			a[1]=2;		
+			var b=new Array("a",1,2);
+			
+			
+			
+			//对象
+			var person={firstname:"jo",lastname:"dd",id:55};
+			//访问
+			document.write(person.firstname);
+			//声明变量类型
+			var cra=new String;
+			
+			
+		</script>
+		
+		
+		
+		<p>js对象</p>
+		<p>表示拥有属性和方法的数据</p>
+		<script>
+			var p={name:"zhang",age:18,showName : function(){
+						//方法；
+						return this.name+"  "+this.age;
+				}
+			}
+			document.write(p.name+"----"+p.showName())
+			
+			document.write("<br />以属性的形式访问："+p.showName);
+		</script>
+		
+	</body>
+</html>

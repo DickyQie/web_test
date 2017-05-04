@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>异常处理</title>
+	</head>
+	<body>
+		<p>try 语句测试代码块的错误。<br />
+		   catch 语句处理错误。<br />
+		   throw 语句创建自定义错误。</p>
+		
+		<input type="text" id="txt" placeholder="请输入">
+		<input type="button" onclick="show()" value="验证">
+		<p id="message"></p>
+		<script>
+			function show(){
+				var message,x;
+				message=document.getElementById("message");
+				message.innerHTML="";
+				x=document.getElementById("txt").value;
+				try{
+					if(x=="") throw "null";
+					if(isNaN(x)) throw "不是数字";
+					x=parseInt(x);
+					if(x<5) throw "太小";
+				}catch(err){
+					message.innerHTML=err;
+				}
+			}
+		</script>
+		
+	</body>
+</html>

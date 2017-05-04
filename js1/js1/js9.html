@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	
+	<script type="text/javascript">
+		/*
+		 * getElementById()  //指定Id
+		 * getElementsByName()  //指定name
+		 * getElementsByTagName  //标签 （"input"） 
+		 */
+		function showLoad(){
+			//console.log("s");
+		}
+		
+		function showInner(){
+			var p=document.getElementById("p");
+			document.write("innerText:"+p.innerText+"<br>"+"innerHtml:"+p.innerHTML);
+		}
+		
+	</script>
+	<body onload="showLoad()">
+		<p id="p">我是标签
+			<a href="">sdf</a>
+		</p>
+		<input type="button" value="inner测试" onclick="showInner()" />
+	</body>
+</html>

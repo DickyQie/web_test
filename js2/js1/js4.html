@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>表单验证</title>
+	</head>
+	<body>
+		<form action="js1.html" name="my" method="get" onsubmit="return show()">
+			<input type="text" name="f" />
+			<input type="submit" value="提交"/>
+		</form>
+		
+		<script>
+			function show(){
+				var x=document.forms["my"]["f"].value;
+				if(x==null || x==""){
+					alert("输入为空");
+					return false;
+				}
+			}
+		</script>
+	</body>
+</html>

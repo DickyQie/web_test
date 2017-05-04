@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>函数</title>
+	</head>
+	<body>
+		<p>函数显式参数(Parameters)与隐式参数(Arguments)</p>
+		<p id="d"></p>
+		<script>
+			
+			//显式参数
+			function myFunction(x, y) {
+			    if (y === undefined) {
+			          y = 0;
+			    } 
+			}
+
+			//隐式参数
+			var x = window.findMax(1, 123, 500, 115, 44, 88);
+			function findMax() {
+			    var i, max = arguments[0];
+			    
+			    if(arguments.length < 2) return max;
+			 
+			    for (i = 0; i < arguments.length; i++) {
+			        if (arguments[i] > max) {
+			            max = arguments[i];
+			        }
+			    }
+			    return max;
+			}
+			document.getElementById("d").innerHTML="最大值:"+x;
+
+		</script>
+		
+		<p>函数的调用： myFun(); window.myFun()</p>
+		<script>
+			function myFunction() {
+    			return this;
+			}
+			console.log(myFunction()); //[object Window]  window 对象
+		</script>
+	</body>
+</html>

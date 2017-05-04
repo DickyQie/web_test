@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>HTML DOM</title>
+	</head>
+	<body onload="check()">
+		<p>通过 id/标签名/通过类名   等元素    查找 HTML 元素</p>
+		
+		<p id="p2">作用:改变内容，属性</p>
+		
+		<h1 onclick="this.innerHTML='Ooops!'">点击文本!</h1>
+		<h3 onclick="changetext(this)">点击文本!</h1>
+		
+		<button id="btn">分配事件</button>
+		<script>
+			document.getElementById("p2").style.color="red";
+			function changetext(id)
+			{
+			    id.innerHTML="Ooops!";
+			}
+			
+			
+			//使用 HTML DOM 来分配事件
+			document.getElementById("btn").onclick=function(){show();}
+			
+			function show(){
+				alert(new Date);
+			}
+			
+			
+			//onload() onunload();事件会在用户进入或离开页面时被触发。
+			
+			function check(){
+				if(navigator.cookieEnabled==true){
+					alert("Cookie可用");
+				}
+			}
+		</script>
+	</body>
+</html>

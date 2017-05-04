@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>typeof操作符  类型转换</title>
+	</head>
+	<body>
+		<p>typeof：检测变量数据类型</p>
+		<script>
+			function load(txt){
+				document.write("<p>"+txt+"</p>");
+			}
+			load(typeof("John"));     // 返回 string
+			typeof 3.14                  // 返回 number
+			typeof false                 // 返回 boolean
+			load(typeof([1,2,3,4]));// 返回 object
+			load(typeof {name:'John', age:34}); // 返回 object 
+			load(typeof v);    //undefined
+		</script>
+		
+		
+		
+		<p>constructor属性：返回所有JS变量的构造函数</p>
+		<script>
+			function loads(txt){
+				document.write("<p>"+txt+"</p>");
+			}
+			load("jj".constructor);     // 返回 function String(){[native code]}
+			//myDate.constructor.toString().indexOf("String") > -1;//验证是否是字符串
+			
+			//String
+			loads(String(100+13));
+			loads((100+13).toString());
+			
+			//Number
+			loads(Number(true));
+			var c=111.12;
+			loads(parseInt(c));
+
+
+		</script>
+	</body>
+</html>

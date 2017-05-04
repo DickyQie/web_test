@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>正则表达式</title>
+	</head>
+	<body>
+		<p>使用单个字符串来描述、匹配一系列符合某个句法规则的字符串搜索模式。</p>
+		
+		<p>search():用于检索字符串中指定的子字符串，返回起始位置</p>
+		<p>replace():匹配并替换字符串</p>
+		<script>
+			function loadz(txt){
+				document.write("<p>"+txt+"</p>");
+			}
+			var str="aaa BBb";
+			loadz(str.search("b"));//6
+			loadz(str.search(/bb/i));//4  i:表示对大小写不敏感
+			
+			loadz(str.replace("aa","cc"));
+			
+		</script>
+		
+		<p>使用RegExp对象</p>
+		<script>
+			function loadz(txt){
+				document.write("<p>"+txt+"</p>");
+			}
+			var p=/e/;
+			loadz(p.test("the s"));//true
+			
+			loadz(/e/.exec("the e"))//e  没有返回空
+			
+			var red=/^[0-9]{8}$/;//八位数字
+			loadz(red.test("13245612"));
+			
+			var a=/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.com)$/;
+			loadz(a.test("zha_a123123-z@q_-q.com"));//邮箱
+		</script>
+	</body>
+</html>
