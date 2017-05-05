@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>window</title>
+	</head>
+	<body>
+		
+		<button onclick="showOpen()">openWindow</button>
+		
+		<script>
+			function showOpen(){
+				//打开一个新窗口   可多个
+				window.open("http://www.runoob.com");
+				//window.open("http://www.microsoft.com/");
+			}
+			function showOpen1(){
+				window.open("http://www.w3schools.com","_blank","toolbar=yes,"+ 
+				"location=yes, directories=no, status=no, menubar=yes, scrollbars=yes,"+
+				"resizable=no, copyhistory=yes, width=400, height=400");
+			}
+			
+		</script>
+		
+		
+		<br />
+		<input type="button" value="打开我的窗口" onclick="openWin()" />
+		<input type="button" value="关闭我的窗口" onclick="closeWin()" />
+		
+		<script>
+			
+			//window.scrollBy(100,100);  设置指定拖动位置  http://www.runoob.com/try/try.php?filename=try_dom_window_scrollto
+			
+			//window.print();  打印当前界面
+			
+			/**
+			 * http://www.runoob.com/try/try.php?filename=try_win_moveto
+			 * myWindow.moveTo(0,0);  移动窗口的位置
+			 * 
+			 * w.resizeTo(500,500);  更改窗口大小
+			 */
+			
+			
+			function openWin(){
+				myWindow=window.open("","","width=200,height=100");
+				myWindow.document.write("<p>这是'我的窗口'</p>");
+			}
+			function closeWin(){
+				myWindow.close();
+			}
+		</script>
+		
+		
+		
+	</body>
+</html>

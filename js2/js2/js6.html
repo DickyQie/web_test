@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>JS window Navigator  JS弹窗</title>
+	</head>
+	<body>
+		<p>window.navigator:包含有关访问者浏览器的信息</p>
+		
+		<script>
+			function doText(txt){
+				document.write(txt+"<br />")
+			}
+			
+			doText("浏览器代号："+window.navigator.appCodeName);
+			doText("浏览器名称："+window.navigator.appName);
+			doText("浏览器版本："+window.navigator.appVersion);
+			doText("cookis是否启动："+window.navigator.cookieEnabled);
+			doText("硬件平台："+window.navigator.platform);
+			doText("用户代理："+window.navigator.userAgent);
+			doText("用户代理语言："+navigator.systemLanguage);
+			
+		</script>
+		
+		
+		
+		<p>可以在JS中创建三种消息框：警告框，确认框，提示框</p>
+		<p>警告框：用于确保用户可以得到某些信息</p>
+		
+		<script type="text/javascript">
+			
+			function doText(txt){
+				document.write(txt+"<br />")
+			}
+			
+			function showAlert(){
+				alert("你好，我是一个警告框");
+			}
+			
+			function showConFirm(){
+				var x;
+				var r=window.confirm("点击按钮");
+				if(r==true){
+					x="你点击确认按钮！";
+				}else{
+					x="取消按钮";
+				}
+				doText(x);
+				
+			}
+			
+			function showPrompt(){
+				var x;
+				var p=window.prompt("请输入姓名","zhang");
+				
+				if(p!=null && p!=""){
+					x="你好！ "+p;
+					doText(x)
+				}else{
+					alert("空值");
+				}
+			}
+			
+		</script>
+		
+		<input type="button"  value="警告框" onclick="showAlert()" />
+		
+		
+		<p>确认框：用于验证是否接受用户操作</p>
+		<input type="button"  value="确认框" onclick="showConFirm()" />
+		
+		
+		
+		<p>提示框：用于提示用户进入界面前输入相应信息</p>
+		<input type="button"  value="提示框" onclick="showPrompt()" />
+		
+		
+		
+	</body>
+</html>

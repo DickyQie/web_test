@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>JS计时事件</title>
+	</head>
+	<body>
+		<p>在一个设定的时间间隔之后来执行代码</p>
+		
+		<p>1:setInterval</p>
+		<script>
+			
+			function a(){
+				//循环执行
+				window.setInterval(b,3000);
+			}
+			
+			function b(){
+				console.log("1");
+			}
+		</script>
+		<button onclick="a()">计时事件</button>
+		
+		<p id="demo"></p>
+		<button onclick="d()">停止计时事件</button>
+		<script>
+			var ab=window.setInterval(c,1000);
+			function c(){
+				var d=new Date();
+				var t=d.toLocaleTimeString();
+				document.getElementById("demo").innerHTML=t;
+			}
+			
+			function d(){
+				window.clearInterval(ab);
+			}
+		</script>
+		
+		
+		
+		<p>2:setTimeout()</p>
+		<script>
+			function aa(){
+				//执行1次
+				window.setTimeout(bb,3000);
+			}
+			
+			function bb(){
+				console.log("2");
+			}
+			
+			//清除执行  window.cliearTimeout(setTimeout对象)
+		</script>
+		<button onclick="aa()">计时事件</button>
+		
+	</body>
+</html>

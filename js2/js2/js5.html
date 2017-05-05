@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>JS Window Screen  + window location  + window history</title>
+	</head>
+	<body>
+		<p>window.screen:对象包含用户相关的屏幕信息</p>
+		
+		<script>
+			function doText(txt){
+				document.write(txt+"<br />")
+			}
+			//可用的屏幕宽度
+			doText(window.screen.availWidth);
+			//可以不要window前缀
+			doText(screen.availHeight);
+			
+		</script>
+		
+		
+		<p>window.location:对象获得当前页面的地址URL，并把浏览器重定向到新的界面</p>
+		
+		
+		
+		<script>
+			function doText(txt){
+				document.write(txt+"<br />")
+			}
+			
+			doText(window.location.href);
+			doText(window.location.hostname);// web 主机的域名
+			doText(window.location.pathname);//当前页面的路径和文件名
+			doText(window.location.port);// web 主机的端口 
+			doText(location.protocol);//所使用的 web 协议（http:// 或 https://）
+			
+			function show(){
+				window.location.assign("http://www.baidu.com");
+			}
+			
+		</script>
+		
+		<input type="button" name="" id="" value="加载新界面" onclick="show()"/>
+		
+		
+		
+		<p>window.history:对象包含浏览器的历史</p>
+		
+		<script>
+			function doText(txt){
+				document.write(txt+"<br />")
+			}
+			
+			function goBack(){
+				//加载历史列表中的前一个 URL。
+				window.history.back();
+			}
+			
+			function show1(){
+				//加载历史列表中的下一个 URL。
+				window.history.forward();
+			}
+			
+			
+		</script>
+		<input type="button" name="" id="" value="返回上一级" onclick="goBack()"/>
+		<input type="button" name="" id="" value="返回上一级" onclick="show1()"/>
+		
+		
+	</body>
+</html>

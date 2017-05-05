@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Js Window</title>
+	</head>
+	<body>
+		<p>Window对象：所有浏览器都支持window对象，他表示浏览器窗口</p>
+		
+		<script>
+			function doText(txt){
+				document.write(txt+"<br />")
+			}
+			
+			//三种方法能够确定浏览器窗口的尺寸。
+			doText(window.innerHeight);
+			doText(window.innerWidth);
+			
+			
+			doText(document.body.clientHeight);//body的高度
+			
+			doText(document.documentElement.clientHeight);
+			
+			
+			//涵盖所有浏览器
+			var w=window.innerWidth
+			|| document.documentElement.clientWidth
+			|| document.body.clientWidth;
+			var h=window.innerHeight
+			|| document.documentElement.clientHeight
+			|| document.body.clientHeight;
+			
+			doText("h="+h+" w="+w);
+			
+			
+			
+			
+			
+			
+		</script>
+	</body>
+</html>

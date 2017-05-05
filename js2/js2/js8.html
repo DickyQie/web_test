@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>JS Cookie</title>
+	</head>
+	<body>
+		
+		<p>Cookie用于存储Web界面的用户信息(键值对)</p>
+		
+		<p>一次document.cookie只能存一个</p>
+		<script>
+			
+			
+			function showData(){
+				
+				//存
+				//document.cookie="name=zhangqie";
+				
+				//取
+				console.log(document.cookie);
+				
+				document.cookie="name=zhangsan";//修改
+				console.log(document.cookie);
+				
+				console.log(document.cookie.split(";").length);
+				
+			}
+			
+			/***
+			 * 存
+			 */
+			function setCookie(){
+				
+				var d=new Date();
+				var a=30*24*60*60*1000;//设置缓存时间
+				d.setTime(d.getTime()+a);
+				console.log(d.getTime()+a);
+				var exp="expires="+d.toGMTString();
+				console.log(exp);
+				//一个Cookie只能存一个  参数值
+				//document.cookie=("username=zhangqie;name=xinyu;"+exp);
+				document.cookie=("username=zhangqie;"+exp);
+				
+			}
+			
+			function getCookie(){
+				var ca=document.cookie.split(";");
+				console.log(ca.length)
+				for(var i=0;i<ca.length;i++)
+				{
+					console.log(ca[i].trim());
+				}
+			}
+			
+			//删除 cookie 非常简单。您只需要设置 expires 参数为以前的时间即可
+			function deleteCookie(){
+				document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+			}
+			
+			
+			
+		</script>
+		
+		<button onclick="showData()">cookie</button>
+		
+		
+		<button onclick="setCookie()">cookie1</button>
+		
+		<button onclick="getCookie()">cookie2</button>
+		
+		<br />
+		<button onclick="deleteCookie()">delete</button>
+	</body>
+</html>

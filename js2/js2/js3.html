@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>数据类型相关对象</title>
+	</head>
+	<body>
+		<script>
+			function doText(txt){
+				document.write(txt+"<br />")
+			}
+			//大小写转换
+			
+			var txt="Hello World!";
+			doText(txt.toUpperCase());//大写
+			doText(txt.toLowerCase());//小写
+			
+			
+			var da=new Date();
+			var year=da.getYear();
+			var month=da.getMonth()+1;
+			var d1=da.getDate();
+			var day=da.getDay();
+			var h=da.getHours();
+			var m=da.getMinutes();
+			var se=da.getSeconds();
+			var mill=da.getMilliseconds();
+			
+			doText(year+"-"+month+"-"+d1);
+			doText("现在时间是："+h+"时"+m+"分"+se+"秒"+mill+"毫秒")
+			
+			
+			
+			
+			/*
+			 * RegExp对象：正则表达式描述了字符的模式对象。
+			 * 
+			 * 
+			 */
+			
+			//1：test  返回  true false
+			
+			var p=new RegExp("e");
+			doText(p.test("the"));
+			
+			//2:exec();  返回对应字符  没有返回null
+			
+			var p1=new RegExp("e");
+			doText(p.exec("base"));
+			</script>
+	</body>
+</html>

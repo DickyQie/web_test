@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>JavaScript对象</title>
+	</head>
+	<body>
+		<script>
+			function doText(txt){
+				document.write(txt+"<br />")
+			}
+			//创建直接的实例
+			var person=new Object();
+			person.firstname="Json";
+			person.age=50;
+			
+			doText(person.firstname);
+			doText(person.age);
+			
+			var ps={fis:"Json",age:55};
+			doText(ps.fis+ " is "+ps.age);
+			
+			
+			/*对象构造器*/
+			
+			function per(name,age){
+				this.name=name;
+				this.age=age;
+			}
+			var fa=new per("zhangqie",18);
+			doText(fa.name);
+			
+			
+			//把方法添加到 JavaScript 对象
+			
+			function pt(name,age){
+				this.name=name;
+				this.age=age;
+				
+				this.change=change;
+				function change(names){
+					this.name=names;
+				}
+			}
+			var p=new pt("zhang",18);
+			p.change("qieqie");
+			doText(p.name);
+			
+			
+			/*
+			 * JavaScript 是面向对象的语言，但 JavaScript 不使用类。不会创建类
+			 * JavaScript 基于 prototype，而不是基于类的。
+			 */
+			
+			
+			
+			//任何数据类型都可以是对象
+			
+			
+		</script>
+	</body>
+</html>
