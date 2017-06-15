@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Bootstrap-布局组件-按钮下拉菜单</title>
+		<script type="text/javascript" src="../js/jquery.min.js" ></script>
+		<script type="text/javascript" src="../js/bootstrap.min.js" ></script>
+	</head>
+	
+	<link rel="stylesheet" href="../css/bootstrap.min.css" />
+	<body>
+		<div class="btn-group">
+			<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+				默认<span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu">
+				<li><a href="#">功能</a></li>
+				<li><a href="#">其他</a></li>
+				<li class="divider"></li>
+				<li><a href="#">其他</a></li>
+			</ul>
+		</div>
+		<br />
+		<div class="btn-group">
+			<button type="button" class="btn btn-default">默认</button>
+			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+				<span class="caret"></span>
+				<span class="sr-only">切换下拉菜单</span>
+			</button>
+			<ul class="dropdown-menu">
+				<li><a href="">功能</a></li>
+				<li class="divider"></li>
+				<li><a href="#">分离的链接</a></li>
+			</ul>
+		</div>
+		
+		
+		<p>按钮上拉菜单+大小(btn-lg btn-sm btn-xs)</p>
+		<div class="row" style="margin-left: 50px;margin-top: 165px;">
+			<div class="btn-group dropup">
+				<button type="button" class="btn btn-default dropdown-toggle btn-lg" data-toggle="dropdown">
+					默认<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu">
+					<li>
+						<a href="">功能</a>
+					</li>
+					<li>
+						<a href="">功能</a>
+					</li>
+					 <li class="divider"></li>
+		            <li>
+		                <a href="#">分离的链接</a>
+		            </li>
+				</ul>
+			</div>
+			
+			<div class="btn-group dropup">
+				<button type="button" class="btn btn-primary dropdown-toggle btn-xs" data-toggle="dropdown">
+					原始<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu">
+					<li><a href="#">Item1</a></li>
+					<li><a href="#">Item2</a></li>
+					 <li class="divider"></li>
+		            <li>
+		                <a href="#">分离的链接</a>
+		            </li>
+				</ul>
+			</div>
+			
+		</div>
+		
+	</body>
+</html>

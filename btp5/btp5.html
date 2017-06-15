@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Bootstrap--插件-- 轮播（Carousel）插件</title>
+		<script type="text/javascript" src="../js/jquery.min.js" ></script>
+		<script type="text/javascript" src="../js/bootstrap.min.js" ></script>
+	</head>
+	<link rel="stylesheet" href="../css/bootstrap.min.css" />
+	<body>
+		<p>Bootstrap 轮播（Carousel）插件是一种灵活的响应式的向站点添加滑块的方式。</p>
+		
+		<div id="myCarousel" class="carousel slide">
+			<!--轮播指标圆圈-->
+			<ol class="carousel-indicators">
+				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				<li data-target="#myCarousel" data-slide-to="1"></li>
+				<li data-target="#myCarousel" data-slide-to="2"></li>
+			</ol>
+			<!--轮播的图片-->
+			<div class="carousel-inner">
+				<div class="carousel-inner">
+					<div class="item active">
+						<img src="../img/zhangwo_hometop1.jpg"  height="396px" width="100%"/>
+						<div class="carousel-caption">标题</div>
+					</div>
+					
+					<div class="item">
+						<img src="../img/zhangwo_hometop2.jpg" height="396px" width="100%"/>
+					</div>
+					
+					<div class="item">
+						<img src="../img/zhangwo_hometop3.jpg" height="396px" width="100%"/>
+					</div>
+				</div>
+			</div>
+			<!--轮播导航按钮-->
+			<a class="carousel-control left" href="#myCarousel" data-slide="prev">
+				&lsaquo;
+			</a>
+			<a class="carousel-control right" href="#myCarousel" data-slide="next">
+				&rsaquo;
+			</a>			
+		</div>
+		
+	</body>
+</html>

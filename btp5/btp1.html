@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Bootstrap--插件-- 弹出框（Popover）插件</title>
+		<script type="text/javascript" src="../js/jquery.min.js" ></script>
+		<script type="text/javascript" src="../js/bootstrap.min.js" ></script>
+	</head>
+	<link rel="stylesheet" href="../css/bootstrap.min.css" />
+	<body>
+		<div class="container" style="padding: 100px 50px 10px;">
+			<button type="button" class="btn btn-default" title="title"
+			data-container="body" data-toggle="popover" data-placement="top"
+			data-content="顶部的Popover中的一些内容">
+			顶部Popover</button>
+			
+			<button type="button" class="btn btn-warning" title="title2"
+			data-container="body" data-toggle="popover" data-placement="bottom"
+			data-content="底部的一些提示内容">底部提示内容</button>
+			
+			<button type="button" class="btn btn-success popover-toggle" title="title3"
+			data-container="body" data-toggle="popover" data-placement="right"
+			data-content="右边的内容哦">右边提示信息</button>
+			
+			
+			<br />
+			<p class="popover-options">
+				<a href="#" type="button" class="btn btn-warning" title="<h2>Title</h2>"  
+				   data-container="body" data-toggle="popover" 
+				   data-content="<h4>Popover 中的一些内容 —— options 方法</h4>">
+					Popover
+				</a>
+			</p>
+		</div>
+		
+		
+		
+		<script>
+			$(function(){
+				$("[data-toggle='popover']").popover();
+			});
+			
+			
+			$(function(){$('.popover-toggle').popover('toggle')});
+			$(function () { $(".popover-options a").popover({html : true });});
+		</script>
+	</body>
+</html>

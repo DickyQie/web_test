@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Bootstrap-布局组件-下拉菜单</title>
+		<script type="text/javascript" src="../js/jquery.min.js" ></script>
+		<script type="text/javascript" src="../js/bootstrap.min.js" ></script>
+	</head>
+	
+	<link rel="stylesheet" href="../css/bootstrap.min.css" />
+	<body>
+		
+		<div class="dropdown">
+			<button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+				主题
+				<span class="caret"></span>
+			</button>
+			
+			<ul class="dropdown-menu" >
+				<li>
+					<a tabindex="-1" href="#">Java</a>
+				</li>
+				<li role="presentation">
+					<a tabindex="-1" href="#">SQL</a>
+				</li>
+				<li class="divider"></li>
+				<li role="presentation">
+					<a tabindex="-1" href="#">Android</a>
+				</li>
+			</ul>
+		</div>
+		
+		
+		
+		<p>选项  对齐</p>
+		<div class="dropdown">
+			<button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+				主题<span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu pull-right">
+				<li>	
+					<a tabindex="-1" href="#">Android</a>
+				</li>
+				<li>	
+					<a tabindex="-1" href="#">数据</a>
+				</li>
+				<li class="divider"></li>
+				<li>	
+					<a tabindex="-1" href="#">通信</a>
+				</li>
+				
+			</ul>
+		</div>
+		
+		
+		
+		
+		<p>标题</p>
+		<p>方向 class=“dropup” ：指定一个向上的下拉菜单。</p>
+		<div class="dropup" style="margin-top: 55px;">
+			<button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+				主题<span class="caret"></span>
+			</button>
+			
+			<ul class="dropdown-menu">
+				<li class="dropdown-header">下拉菜单标题1</li>
+				<li>
+					<a tabindex="-1" href="#">JAVA</a>
+				</li>
+				<li>
+					<a tabindex="-1" href="#">SQL</a>
+				</li>
+				<li class="dropdown-header">下拉菜单标题2</li>
+				 <li>
+            		<a tabindex="-1" href="#">分离的链接</a>
+       			 </li>
+			</ul>
+		</div>
+	</body>
+</html>

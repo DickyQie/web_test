@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Bootstrap-布局组件-警告</title>
+		<script type="text/javascript" src="../js/jquery.min.js" ></script>
+		<script type="text/javascript" src="../js/bootstrap.min.js" ></script>
+	</head>
+	
+	<link rel="stylesheet" href="../css/bootstrap.min.css" />
+	<body>
+		<div class="alert alert-success">成功！很好地完成了提交。</div>
+		<div class="alert alert-info">信息</div>
+		<div class="alert alert-warning">警告</div>
+		<div class="alert alert-danger">错误</div>
+		
+		
+		<p>可取消的警告</p>
+		<div class="alert alert-success alert-dismissable">
+			<button type="button" class="close" data-dismiss="alert" aria-hidden="true">
+				&times;
+			</button>
+			成功！很好地完成了提交。
+		</div>
+		
+		  <div class="alert alert-warning alert-dismissable">
+            <button type="button" class="close" data-dismiss="alert"
+                    >
+                &times;
+            </button>
+          	  警告！请不要提交。
+        </div>
+        
+         <div class="alert alert-danger alert-dismissable">
+            <button type="button" class="close" data-dismiss="alert">
+                &times;
+            </button>
+          		  错误！请进行一些更改。
+        </div>
+        
+        
+        <p>警告中的链接</p>
+        <p>使用 .alert-link 实体类来快速提供带有匹配颜色的链接</p>
+        <div class="alert alert-success">
+        	<a href="#" class="alert-link">
+        		成功！很好地完成了提交。
+        	</a>
+        </div>
+	</body>
+</html>

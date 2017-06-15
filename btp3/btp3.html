@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Bootstrap-布局组件-标签,徽章</title>
+		<script type="text/javascript" src="../js/jquery.min.js" ></script>
+		<script type="text/javascript" src="../js/bootstrap.min.js" ></script>
+	</head>
+	
+	<link rel="stylesheet" href="../css/bootstrap.min.css" />
+	<body>
+		
+		<h2>My He She<span class="label label-default">label</span></h1>
+		<h3>Example Heading <span class="label label-default">Label</span></h3>
+		<h4>Example Heading <span class="label label-default">Label</span></h4>
+
+		
+		<span class="label label-default">默认标签</span>
+		<span class="label label-primary">主要标签</span>
+		<span class="label label-success">成功标签</span>
+		<span class="label label-info">信息标签</span>
+		<span class="label label-warning">警告标签</span>
+		<span class="label label-danger">危险标签</span>
+
+		<p>徽章</p>
+		<a href="#">Mailbox<span class="badge">55</span></a>
+		<div class="container">
+		  <h2>徽章</h2>
+		  <p>.badge 类指定未读消息的数量:</p>
+		  <p><a href="#">收件箱 <span class="badge">21</span></a></p>
+		</div>
+		
+		<p>激活导航状态</p>
+		<nav>
+			<ul class="nav nav-pills">
+				<li class="active">
+					<a href="#">
+						首页<span class="badge">36</span>
+					</a>
+				</li>
+				<li>
+			        <a href="#">简介</a>
+			    </li>
+			    <li>
+			        <a href="#">消息
+			            <span class="badge">3</span>
+			        </a>
+			    </li>
+			</ul>
+		</nav>
+		<h4>列表导航中的激活状态</h4>
+		<nav>
+			<ul class="nav nav-pills nav-stacked" style="max-width: 266px;">
+				<li class="active">
+					<a href="#">
+						<span class="badge pull-right">36</span>首页
+					</a>
+					 <li>
+			        <a href="#">简介</a>
+			    </li>
+			    <li>
+			        <a href="#">
+			            <span class="badge pull-right">3</span>消息
+			        </a>
+			    </li>
+				</li>
+			</ul>
+		</nav>
+	</body>
+</html>

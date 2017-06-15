@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Bootstrap--插件-- 提示工具（Tooltip）插件</title>
+		<script type="text/javascript" src="../js/jquery.min.js" ></script>
+		<script type="text/javascript" src="../js/bootstrap.min.js" ></script>
+	</head>
+	<link rel="stylesheet" href="../css/bootstrap.min.css" />
+	<body>
+		<p>当您想要描述一个链接的时候，提示工具（Tooltip）就显得非常有用。</p>
+		
+		<h4>提示工具（Tooltip）插件 - </h4>
+		这是一个 <a href="#" class="tooltip-test" data-toggle="tooltip"
+		        title="默认的 Tooltip">
+		    默认的 Tooltip
+		</a>.
+		这是一个 <a href="#" class="tooltip-test" data-toggle="tooltip"
+		        data-placement="left" title="左侧的 Tooltip">
+		    左侧的 Tooltip
+		</a>.
+				
+		这是一个 <a href="#" class="tooltip-test" data-toggle="tooltip" data-placement="left" title="左侧的 Tooltip">左侧的 Tooltip</a>.
+		这是一个 <a href="#" data-toggle="tooltip" data-placement="top" title="顶部的 Tooltip">顶部的 Tooltip</a>.
+		这是一个 <a href="#" data-toggle="tooltip" data-placement="bottom" title="底部的 Tooltip">底部的 Tooltip</a>.
+		这是一个 <a href="#" data-toggle="tooltip" data-placement="right" title="右侧的 Tooltip">右侧的 Tooltip</a>
+	
+	
+	<br />
+		<button type="button" class="btn btn-default" data-toggle="tooltip"
+		        title="默认的 Tooltip">
+		    默认的 Tooltip
+		</button>
+		<button type="button" class="btn btn-default" data-toggle="tooltip"
+		        data-placement="left" title="左侧的 Tooltip">
+		    左侧的 Tooltip
+		</button>
+		<button type="button" class="btn btn-default" data-toggle="tooltip"
+		        data-placement="top" title="顶部的 Tooltip">
+		    顶部的 Tooltip
+		</button>
+		<button type="button" class="btn btn-default" data-toggle="tooltip"
+		        data-placement="bottom" title="底部的 Tooltip">
+		    底部的 Tooltip
+		</button>
+		<button type="button" class="btn btn-default" data-toggle="tooltip"
+		        data-placement="right" title="右侧的 Tooltip">
+		    右侧的 Tooltip
+		</button>
+		<script>
+		    $(function () { $("[data-toggle='tooltip']").tooltip(); });
+		</script>
+	</body>
+</html>

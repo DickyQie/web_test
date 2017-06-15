@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Bootstrap-布局组件-导航元素</title>
+		<script type="text/javascript" src="../js/jquery.min.js" ></script>
+		<script type="text/javascript" src="../js/bootstrap.min.js" ></script>
+	</head>
+	
+	<link rel="stylesheet" href="../css/bootstrap.min.css" />
+	<style>
+		ul{
+			margin-left: 5px;
+		}
+	</style>
+	<body>
+		<p>标签的导航菜单</p>
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="#">HOME</a></li>
+			<li><a href="#">SVN</a></li>
+			<li ><a href="#">H5</a></li>
+		</ul>
+		
+		<p>胶囊式的导航菜单</p>
+		<ul class="nav nav-pills">
+			<li class="active"><a href="#">Home</a></li>
+			<li><a href="#">SVN</a></li>
+			<li><a href="#">Bootstrap</a></li>
+		</ul>
+		
+		<p>垂直的胶囊式的导航菜单</p>
+		<ul class="nav nav-pills nav-stacked">
+			<li class="active"><a href="#">Home</a></li>
+			<li><a href="#">SVN</a></li>
+			<li><a href="#">Bootstrap</a></li>
+		</ul>
+		
+		<p>两端对齐的导航</p>
+		<ul class="nav nav-pills nav-justified">
+			<li class="active"><a href="#">Home</a></li>
+			<li><a href="#">SVN</a></li>
+			<li><a href="#">Bootstrap</a></li>
+			<li><a href="#">SVN</a></li>
+		</ul>
+		
+		<p>导航元素禁用链接</p>
+		<ul class="nav nav-pills">
+			<li class="active"><a href="#">Home</a></li>
+			<li><a href="#">SVN</a></li>
+			<li><a href="#">Bootstrap</a></li>
+			<li class="disabled"><a href="#">SVN</a></li>
+		</ul>
+		
+		<p>下拉菜单  和带有下拉菜单的胶囊(nav-tabs--nav-pills)</p>
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="#">Home</a></li>
+			<li><a href="#">SVN</a></li>
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+					Bootstrap<span class="caret"></span>
+				</a>
+				<ul class="dropdown-menu">
+					<li><a href="#">CSS</a></li>
+					<li><a href="#">Bootstrap组件</a></li>
+				</ul>
+			</li>
+			<li><a href="#">SVN</a></li>
+		</ul>
+		
+	
+		<p>标签对应内容切换修改tab-content  和 tab-pance 连用</p>
+		<p><strong>提示:</strong> 与 .tab-pane 和 data-toggle="tab" (data-toggle="pill" ) 一同使用, 
+			设置标签页对应的内容随标签的切换而更改。</p>
+		<ul class="nav nav-tabs">
+			<li class="active">
+				<a data-toggle="tab" href="#home">首页</a>
+			</li>
+			<li><a href="#menu1" data-toggle="tab">菜单1</a></li>
+			<li><a href="#menu2" data-toggle="tab">菜单2</a></li>
+		</ul>
+		
+		<div class="tab-content">
+			<div id="home" class="tab-pane fade in active">
+				<h3>首页</h3>
+				<p>学的不仅是技术，更是梦想！！！</p>
+			</div>
+			<div id="menu1" class="tab-pane fade">
+				<h3>菜单1</h3>
+				<p>学的不仅是技术，更是梦想！！！</p>
+			</div>
+			<div id="menu2" class="tab-pane fade">
+				<h3>菜单2</h3>
+				<p>学的不仅是技术，更是梦想！！！</p>
+			</div>
+		</div>
+	</body>
+</html>

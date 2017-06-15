@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Bootstrap-代码+表格</title>
+		<script type="text/javascript" src="../js/jquery.min.js" ></script>
+		<script type="text/javascript" src="../js/bootstrap.min.js" ></script>
+	</head>
+	
+	<link rel="stylesheet" href="../css/bootstrap.min.css" />
+	<body>
+		<p>1</p>
+		<p><code>&lt;header&gt;</code>作为内联元素被包围</p>
+		<p>如果需要代码把代码显示为一个独立的块元素，请使用&lt;pre&gt;标签：</p>
+		
+		<pre>
+			&lt;article&gt;
+				&lt;h1&gt; Article Heading&lt;/h1&gt;
+			&lt;article&gt;
+		</pre>
+		
+		
+		
+		<p>2:表格</p>
+		<p>基本的表格</p>
+		<table class="table">
+			<caption>基本的表格布局</caption>
+			<!--thead：表格标题行的容器元素-->
+			<thead>
+				<tr>
+					<th>名称</th>
+					<th>城市</th>
+				</tr>
+			</thead>
+			<!--tbody：表示主体的容器元素-->
+			<tbody>
+				<tr>
+					<td>Tanmay</td>
+					<td>Babglore</td>
+				</tr>
+				<tr>
+					<td>Tanmay</td>
+					<td>Babglore</td>
+				</tr>
+			</tbody>
+		</table>
+		<table class="table table-striped">
+			<caption>条纹表格</caption>
+			<thead>
+				<tr>
+					<th>名称</th>
+ 					<th>城市</th>
+  					<th>邮编</th>
+				</tr>
+			</thead>
+			<tbody>
+				 <tr>
+			      <td>Tanmay</td>
+			      <td>Bangalore</td>
+			      <td>560001</td>
+				</tr>
+			    <tr>
+			      <td>Sachin</td>
+			      <td>Mumbai</td>
+			      <td>400003</td>
+			    </tr>
+			    <tr>
+			      <td>Uma</td>
+			      <td>Pune</td>
+			      <td>411027</td>
+			    </tr>
+			</tbody>
+		</table>
+		
+		
+		<p>table-bordered:边框表格</p>
+		<p>table-hover:悬停表格</p>
+		<p>table-condensed：精简表格，行内边距padding被切为两半，以便看起来紧凑</p>
+		
+		<table class="table table-condensed">
+			<caption>边框表格</caption>
+			<thead>
+				<tr>
+					 <th>名称</th>
+				      <th>城市</th>
+				      <th>邮编</th>
+				</tr>
+			</thead>
+			<tbody>
+				 <tr>
+			      <td>Tanmay</td>
+			      <td>Bangalore</td>
+			      <td>560001</td>
+				</tr>
+			    <tr>
+			      <td>Sachin</td>
+			      <td>Mumbai</td>
+			      <td>400003</td>
+			    </tr>
+			    <tr>
+			      <td>Uma</td>
+			      <td>Pune</td>
+			      <td>411027</td>
+			    </tr>
+			</tbody>
+		</table>
+		
+		<p>上下文类:允许改变表格行或者单个单元格的背景颜色</p>
+		<table class="table">
+			<caption>上下文表格布局</caption>
+			<thead>
+				<tr>
+			      <th>产品</th>
+			      <th>付款日期</th>
+			      <th>状态</th></tr>
+			</thead>
+			<tbody>
+				 <tr class="active">
+				      <td>产品1</td>
+				      <td>23/11/2013</td>
+				      <td>待发货</td></tr>
+				    <tr class="success">
+				      <td>产品2</td>
+				      <td>10/11/2013</td>
+				      <td>发货中</td></tr>
+				    <tr class="warning">
+				      <td>产品3</td>
+				      <td>20/10/2013</td>
+				      <td>待确认</td></tr>
+				    <tr class="danger">
+				      <td>产品4</td>
+				      <td>20/10/2013</td>
+				      <td>已退货</td>
+				    </tr>
+			</tbody>
+		</table>
+		
+		<p>table-responsive响应式表格</p>
+		<table class="table table-responsive">
+			<caption>边框表格</caption>
+			<thead>
+				<tr>
+					  <th>名称</th>
+				      <th>城市</th>
+				      <th>邮编</th>
+				</tr>
+			</thead>
+			<tbody>
+				 <tr>
+			      <td>Tanmay</td>
+			      <td>Bangalore</td>
+			      <td>560001</td>
+				</tr>
+			    <tr>
+			      <td>Sachin</td>
+			      <td>Mumbai</td>
+			      <td>400003</td>
+			    </tr>
+			    <tr>
+			      <td>Uma</td>
+			      <td>Pune</td>
+			      <td>411027</td>
+			    </tr>
+			</tbody>
+		</table>
+		
+	</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Bootstrap--插件-- 警告框（Alert）插件</title>
+		<script type="text/javascript" src="../js/jquery.min.js" ></script>
+		<script type="text/javascript" src="../js/bootstrap.min.js" ></script>
+	</head>
+	<link rel="stylesheet" href="../css/bootstrap.min.css" />
+	<body>
+		<p>警告框（Alert）消息大多是用来向终端用户显示诸如警告或确认消息的信息。</p>
+		
+		<div class="alert alert-warning">
+			<a href="#" class="close" datat-dismiss="alert">
+				&times;
+			</a>
+			<strong>警告！</strong>你的网络连接有问题
+		</div>
+		
+		<h3>警告框(Alert)插件alert方法</h3>
+		<div id="myAlert" class="alert alert-success">
+			<a href="#" class="close" data-dismiss="alert">&times;</a>
+			<strong>成功!</strong>结果是成功的
+		</div>
+		<div id="myAlert" class="alert alert-warning">
+			<a href="#" class="close" data-dismiss="alert">&times;</a>
+			<strong>警告！</strong>你的网络链接有问题
+		</div>
+		
+		<div id="myAlert1" class="alert alert-success">
+			<a href="#" class="close" data-dismiss="alert">&times;</a>
+			<strong>成功!</strong>结果是成功的
+		</div>
+		
+		<script>
+			$(function(){
+				$(".close").click(function(){
+					$("#myAlert").alert();
+				});
+			});
+			
+			$(function(){
+				$("#myAlert1").bind('closed.bs.alert',function(){
+					alert("警告信息框被关闭。");
+				});
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Bootstrap-表单</title>
+		<script type="text/javascript" src="../js/jquery.min.js" ></script>
+		<script type="text/javascript" src="../js/bootstrap.min.js" ></script>
+	</head>
+	
+	<link rel="stylesheet" href="../css/bootstrap.min.css" />
+	<style>
+		form{
+			padding-left: 5px;
+		}
+		.row div[class^="col-lg"]{
+			margin-top: 5px;
+		}
+	</style>
+	<body>
+		<p>表单控件大小：使用class.input-lg和.col-lg-*来设置表单的高和宽</p>
+		<form>
+			<div class="form-group">
+				<input class="form-control" type="text" placeholder="默认的"/>
+			</div>
+			
+			<div class="form-group">
+				<input type="text" class="form-control input-lg" placeholder=".input-lg" />
+			</div>
+			
+			<div class="form-group">
+				<input class="form-control input-sm" type="text" placeholder=".nput-sm"/>
+			</div>
+			
+			<div class="form-group">
+				<select class="form-control input-lg">
+					<option value="">默认</option>
+					<option value="">Item</option>
+				</select>
+			</div>
+			
+			<div class="form-group">
+				<select class="form-control input-sm">
+					<option value="">默认</option>
+					<option value="">Item</option>
+				</select>
+			</div>
+			
+			<p>col-lg-*:宽度</p>
+			
+			<div class="row">
+				<div class="col-lg-2">
+					<input type="text" class="form-control" placeholder=".col-lg-2" />
+				</div>
+			
+				<div class="col-lg-3">
+					<input type="text" class="form-control" placeholder=".col-lg-3" />
+				</div>
+			
+				<div class="col-lg-4">
+					<input type="text" class="form-control" placeholder=".col-lg-4" />
+				</div>
+			</div>
+		</form>
+		
+		
+		
+		<p>帮助文本案例</p>
+		<form>
+			<input type="text" class="form-control" />
+			<span class="help-block">
+				一个较长的帮助文本块，超过一行，
+		需要扩展到下一行。本实例中的帮助文本总共有两行。
+			</span>
+		</form>
+	</body>
+</html>

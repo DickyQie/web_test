@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Bootstrap-表单</title>
+		<script type="text/javascript" src="../js/jquery.min.js" ></script>
+		<script type="text/javascript" src="../js/bootstrap.min.js" ></script>
+	</head>
+	
+	<link rel="stylesheet" href="../css/bootstrap.min.css" />
+	<style>
+		form{
+			padding-left: 5px;
+		}
+	</style>
+	<body>
+		<p>Bootstrap支持的表单控件</p>
+		<p>Bootstrap 支持最常见的表单控件，主要是 input、textarea、checkbox、radio 和 select。</p>
+		<p>在&lt;form &gt;标签添加 class.form-inline</p>
+		
+		<p>1：input输入框</p>
+		<p>2：文本框</p>
+		<form  role="form">
+			<div class="form-group">
+				<label for="name">文本框</label>
+				<textarea type="text" class="form-control" rows="3"></textarea>
+			</div>
+		</form>
+		
+		<p>复选框和单选框</p>
+		<p>同一行上：。checkbox-inline 或 radio-inline</p>
+		
+		<div class="checkbox">
+			<label>
+				<input type="checkbox" />选项1
+			</label>
+		</div>
+		<div class="checkbox">
+			<label>
+				<input type="checkbox" />选项2
+			</label>
+		</div>
+		
+		<div class="radio">
+			<label>
+				<input type="radio" id="op" name="opname" value="option1" checked="checked"/>
+			</label>
+		</div>
+		<div class="radio">
+			<label>
+				<input type="radio" id="op" name="opname" value="option2"/>
+			</label>
+		</div>
+		
+		<p>水平</p>
+		<div>
+			<label class="checkbox-inline">
+				<input type="checkbox" value="pp1" />选项1
+			</label>
+			<label class="checkbox-inline">
+				<input type="checkbox" value="pp1" />选项2
+			</label>
+			<label class="checkbox-inline">
+				<input type="checkbox" value="pp1" />选项3
+			</label>
+			
+			<label class="checkbox-inline">
+				<input type="radio" name="rname" value="pp1" />选项1
+			</label>
+			<label class="checkbox-inline">
+				<input type="radio" name="rname" value="pp1" />选项2
+			</label>
+		</div>
+		
+		
+		<p>Select：选择框</p>
+		
+		<form>
+			<div class="form-group">
+				<label>选择列表</label>
+				<select class="form-control">
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+				</select>
+				
+				<label>可多选选择列表</label>
+				<select class="form-control" multiple="multiple">
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+				</select>
+			</div>
+		</form>
+		
+		
+		<p>静态控件</p>
+		<p>当你需要在一个水平表单标签后面放置纯文本是，请在&lt;p&gt; class.form-control-static</p>
+		<form>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">Email</label>
+				<div class="col-sm-10">
+					<p class="form-control-static">email@example.com</p>
+				</div>
+			</div>
+		</form>
+		
+		<p>表单控件状态</p>
+		<p>focus获取焦点，禁用输入框</p>
+		<form class="form-horizontal" role="form">
+			<div class="form-group">
+				<label class="col-sm-2 control-label">聚焦</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" value="该输入框获得焦点"/>
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<label class="col-sm-2 control-label">
+					禁用
+				</label>
+				<div class="col-sm-10">
+					<input class="form-control" type="text" placeholder="禁止输入" disabled="disabled"/>
+				</div>
+			</div>
+			
+			<p>对 <fieldset> 添加 disabled 属性来禁用 <fieldset> 内的所有控件。</p>
+			
+			<fieldset disabled>
+				<div class="form-group">
+					<label class="col-sm-2 control-label">
+						禁止输入
+					</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" placeholder="禁止输入" />
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<label for="disabledSelect"  class="col-sm-2 control-label">禁用选择菜单（Fieldset disabled）
+					</label>
+					<div class="col-sm-10">
+						<select id="disabledSelect" class="form-control">
+							<option>禁止选择</option>
+						</select>
+					</div>
+				</div>
+			</fieldset>
+			
+			
+			<p>验证状态：包含了错误，警告，成功的验证样式</p>
+			<div class="form-group has-success">
+				<label class="col-sm-2 control-label">
+					输入成功
+				</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" />
+				</div>
+			</div>
+			
+			<div class="form-group has-warning">
+				<label class="col-sm-2 control-label">
+					输入警告
+				</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" />
+				</div>
+			</div>
+			
+			<div class="form-group has-error">
+				<label class="col-sm-2 control-label">
+					输入错误
+				</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" />
+				</div>
+			</div>
+			
+			
+			
+			
+		</form>
+	</body>
+</html>
