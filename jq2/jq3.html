@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>JQuery CSS() 方法  JQuery尺寸</title>
+		<script type="text/javascript" src="../css/jquery-1.8.3.js" ></script>
+		<script>
+			$(document).ready(function(){
+				$("#btn1").click(function(){
+					alert("color:"+$("p").css("background-color"));
+					//改变背景，可设置多个
+					//$("p").css("background-color","yellowgreen");
+					
+					$("p").css({"background-color":"yellowgreen","font-size":"21px"});
+				});
+			});
+			
+			$(function(){
+				$("#btn2").click(function(){
+					var txt="div宽度："+$("#div1").width()+"<br>div高度："+$("#div1").height();	
+					$("#div1").html(txt);
+				});
+			});
+			
+			$(function(){
+				$("#btn3").click(function(){
+					var txt="div宽度："+$("#div2").width()+"<br>div高度："+$("#div2").height()+
+					"<br> div w包含内边距："+$("#div2").innerWidth()+"<br>h：包含内边距："+$("#div2").innerHeight();
+					$("#div2").html(txt);
+				});
+			});
+			
+			$(function(){
+				$("#btn4").click(function(){
+					var txt="div宽度："+$("#div3").width()+"<br>div高度："+$("#div3").height()+
+					"<br> div w包含内边距和边框："+$("#div3").outerWidth()+"<br>h：包含内边距和边框："+$("#div3").outerHeight();
+					$("#div3").html(txt);
+				});
+			});
+		</script>
+	</head>
+	<style>
+		div{
+			width: 300px;
+			height: 100px;
+			padding: 10px;
+			margin: 3px;
+			border: 1px solid blue;
+			background-color: lightblue;
+		}
+	</style>
+	<body>
+		<span>css()方法设置并返回被选元素的一个或多个样式属性</span>
+		
+		<p style="background-color:#ff0000">这是一个段落。</p>
+		<p style="background-color:#00ff00">这是一个段落。</p>
+		<button id="btn1">返回background-color</button>
+		
+		
+		
+		<p>尺寸：处理元素和浏览器窗口的尺寸</p>
+		<p>1:width，height:返回元素的宽度：(不包含内外边距)</p>
+		<div id="div1">
+			
+		</div>
+		<button id="btn2">显示div尺寸</button>
+		
+		<p>2：innerWidth,innerHeight：包含内边距</p>
+		<div id="div2">
+			
+		</div>
+		<button id="btn3">显示div尺寸</button>
+		
+		
+		
+		<p>3：outerWidth,outerHeight：包含内边距和边框</p>
+		<div id="div3">
+			
+		</div>
+		<button id="btn4">显示div尺寸</button>
+	</body>
+</html>

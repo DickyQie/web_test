@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>JQuery效果--隐藏和显示   淡入淡出</title>
+		<script type="text/javascript" src="../css/jquery-1.8.3.js" ></script>
+		
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#btn1").click(function(){
+					$("span").hide(3000,show);
+					
+					//参数可不要
+					//$(selector).show(speed,callback); 
+					//第一个是时间，第二个是执行操作完成后的函数名称
+				});
+			});
+			
+			
+			$(document).ready(function(){
+				$("#btn2").click(function(){
+					$("span").show(3000,show());
+					//第一个是时间，第二个是执行操作前的函数名称
+				});
+			});
+			
+			function show(){
+				alert("1");
+			}
+			
+			
+			$(document).ready(function(){
+				$("#btn3").click(function(){
+					$("span").toggle(3000,show);
+					//$(selector).toggle(speed,callback);
+					//第一个是时间，第二个是执行操作完成后的函数名称
+				});
+			});
+			
+			
+			$(document).ready(function() {
+				$(".btn1").click(function() {
+					$(".div1").fadeIn();
+					$(".div2").fadeIn("slow");
+					$(".div3").fadeIn(3000);
+					//$(selector).fadeIn(speed,callback);
+					//speed 参数规定效果的时长。它可以取以下值："slow"、"fast" 或毫秒。
+					//第一个是时间，第二个是执行操作完成后的函数名称
+				});
+			});
+			
+			$(document).ready(function() {
+				$(".btn2").click(function(){
+					$(".div1").fadeOut();
+					$(".div2").fadeOut("slow");
+					$(".div3").fadeOut(3000);
+				});
+			});
+			
+			$(document).ready(function(){
+				$(".btn3").click(function(){
+					$(".div1").fadeToggle()
+					$(".div2").fadeToggle("slow");
+					$(".div3").fadeToggle(3000);
+				});
+			});
+			
+			$(document).ready(function() {
+				$(".btn4").click(function() {
+					$(".div1").fadeTo("slow",0.15);
+					$(".div2").fadeTo("slow",0.4);
+					$(".div3").fadeTo("slow",0.7);
+				});
+			});
+			
+			
+		</script>
+	</head>
+	<style type="text/css">
+		*{
+			margin: 0 0;padding: 0 0;
+		}
+		p{
+			margin-top: 13px;
+		}
+		
+		div{
+			width: 86px;
+			height: 86px;
+			background: red;
+			display: none;
+			margin-top: 5px;
+		}
+		.div2{
+			background-color: green;
+		}
+		
+		.div3{
+			background-color: blue;
+		}
+		
+	</style>
+	
+	<body>
+		<p>隐藏，显示，滑动，淡入淡出，动画等</p>
+		<span>显示，隐藏操作</span>
+		<button id="btn1">隐藏</button>
+		<button id="btn2">显示</button>
+		
+		
+		<p>一个按钮完成上面的两个操作</p>
+		<button id="btn3">toggle</button><br />
+		
+		
+		<p>淡入淡出</p>
+		<button class="btn1">fadeIn</button>
+		<button class="btn2">fadeOut</button>
+		<div class="div1"></div>
+		<div class="div2"></div>
+		<div class="div3"></div>
+		
+		<p>一个按钮完成上面的两个操作</p>
+		<button class="btn3">fadetoggle</button><br />
+		
+		
+		<p>fadeTo点击渐变为给定的不透明值(值：0-1之间)</p>
+		<button class="btn4">fadeTo</button><br />
+	</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>JQuery-网络请求</title>
+		<script type="text/javascript" src="../css/jquery-1.8.3.js" ></script>
+	</head>
+	<body>
+		
+		
+		
+
+    
+    <button>内容</button>
+    <div id="div1"></div>
+    
+    <script>
+		$(document).ready(function(){
+			$("button").click(function(){
+				
+		/*	$.ajax({
+				type:"get",
+				url:"http://stsc.liaidicn.com/app.php",
+				async:true
+			});
+			*/
+			   ajax({
+		        url: "http://stsc.liaidicn.com/app.php",              //请求地址
+		        type: "POST",                       //请求方式
+		       /* data: { 
+		        	platform:"ios",
+					appkey:"5a379b5eed8aaae531df5f60b12100cfb6dff2c1",
+					c:"district",
+					a:"showlist"
+					},        //请求参数*/
+		        dataType: "json",
+		        success: function (response, xml) {
+		            // 此处放成功后执行的代码re
+		            alert(response);
+		        },
+		        fail: function (status) {
+		            // 此处放失败后执行的代码
+		        }
+		    });
+			
+			
+			
+			});
+			
+		});
+		</script>
+	</body>
+</html>

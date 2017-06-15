@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Jquery-后代</title>
+		<script type="text/javascript" src="../css/jquery-1.8.3.js" ></script>
+	</head>
+	<style>
+		.div1 *
+		{ 
+			display: block;
+			border: 2px solid lightgrey;
+			color: lightgrey;
+			padding: 5px;
+			margin: 15px;
+		}
+	</style>
+	<body>
+		
+		
+		<p>find():返回被选元素的后代元素，一路向下直到最后一个后代</p>
+		
+		
+		<div style="width:500px;" class="div1">div (当前元素) 
+			  <p>p (儿子元素)
+			    <span>span (孙子元素)</span>     
+				<span>span (孙子元素)
+			  </p>
+			  <p>p (儿子元素)
+			    <span>span (孙子元素)</span>
+			 </p> 
+		</div>
+		
+		<script>
+  			$(function(){
+  				//指定元素
+  				$(".div1").find("span").css({"color":"red","border" : "1px solid red"});
+  				//所有后代元素
+  				//$(".div1").find("*").css({"color":"red","border" : "1px solid red"});
+  			});
+  		</script>
+	</body>
+</html>

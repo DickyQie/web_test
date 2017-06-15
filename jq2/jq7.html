@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Jquery-后代</title>
+		<script type="text/javascript" src="../css/jquery-1.8.3.js" ></script>
+	</head>
+	
+	<style>
+		.div1 *
+		{ 
+			display: block;
+			border: 2px solid lightgrey;
+			color: lightgrey;
+			padding: 5px;
+			margin: 15px;
+		}
+	</style>
+	<body>
+		<p>后代是子、孙、曾孙等等</p>
+		<p>通过 jQuery，您能够向下遍历 DOM 树，以查找元素的后代。</p>
+		<p>children():被选元素的子元素</p>
+		<div style="width:500px;" class="div1">div (曾祖父元素)
+		    <div>ul (祖父元素)  
+		      <div>li (父元素)
+		        <span>span</span>
+		      </div>
+		    </div>   
+  		</div>
+  		<div style="width:500px;" class="div1">div (曾祖父元素)
+		    <div class="div2">ul (祖父元素)  
+		    </div>   
+  		</div>
+  		<script>
+  			$(function(){
+  				$(".div1").children().css({"color":"red","border" : "1px solid red"});
+  				//指定元素
+  				//$(".div1").children(".div2").css({"color":"red","border" : "1px solid red"});
+  			});
+  		</script>
+		
+	</body>
+</html>

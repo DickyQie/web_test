@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>JQuery遍历-过滤</title>
+		<script type="text/javascript" src="../css/jquery-1.8.3.js" ></script>
+	</head>
+	<body>
+		<p>过滤:缩小搜索范围</p>
+		<p>first():返回被选元素的首个元素</p>
+		<p>last():返回被选元素的最后一个元素</p>
+		<p>eq():返回被选元素中带有指定索引号的元素，索引号从0开始===下标</p>
+		
+		<div>
+			<p>这是 div 中的一个段落。</p>
+		</div>
+
+		<div>
+			<p>这是另外一个 div 中的一个段落。</p>
+		</div>
+		
+		<h5>第一个</h5>
+		<h5>第一个</h5>
+		<h5>第一个</h5>
+		
+		
+		
+		<p>filter():允许您规定一个标准来匹配元素</p>
+		<p>not():允许您规定一个标准来匹配元素并取相反</p>
+		
+		<h6 class="url">baidu.com</h6>
+		<h6>第一个</h6>
+		<h6>第2个</h6>
+		<h6 class="url">runoob.com</h6>
+
+
+
+
+		<script>
+			$(document).ready(function(){
+				//$("div p").first().css("background-color","yellow");
+				
+				$("div p").last().css("background-color","yellow");
+				
+				$("h5").eq(1).css("background-color","#008000");
+				
+				$("h6").filter(".url").css("background-color","#2CA6E0");
+				
+				$("h6").not(".url").css("background-color","#00A199");
+				
+			});
+			
+			
+		</script>
+		
+	</body>
+</html>

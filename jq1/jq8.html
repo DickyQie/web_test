@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>JQuery捕获(DOM )--设置内容和属性</title>
+		<script type="text/javascript" src="../css/jquery-1.8.3.js" ></script>
+		<script>
+			$(document).ready(function(){
+				$("#btn1").click(function(){
+					$("#p1").text("Hello World");
+					$("#p2").html("<b>Hello World</b>");
+					$("#p3").val("你好");
+				});
+			});
+			
+			//回调函数
+			//i:被选元素列表中当前元素的下标
+			//origText:原始（旧的）值
+			$(document).ready(function(){
+				$("#btn2").click(function(){
+					$("#test1").text(function(i,origText){
+						return origText+"新：index："+i;
+					});
+				});
+			});
+			
+			$(document).ready(function(){
+				$("#btn3").click(function(){
+					$("#test2").html(function(i,origText){
+						return "旧html："+origText+"---新：index:"+i;
+					});
+				});
+			});
+			
+			$(function(){
+				$("#btn4").click(function(){
+					/*$("#aa").attr("href","www.runoob.com");*/
+					
+					$("#aa").attr({
+						"href":"www.runoob.com",
+						"title":"Jquery"
+					});
+					var title=$("#aa").attr('title');
+					alert(title);
+					$("#aa").html(title);
+				});
+			});
+			
+			$(function(){
+				$("#btn5").click(function(){
+					$("#aa").attr("href",function(i,value){
+						alert("原来的路径："+value+"下标："+i);
+						return "ll.com";
+					})
+				});
+			});
+			
+			
+		</script>
+	</head>
+	<body>
+		<p>改变内容和属性</p>
+		<p id="p1">text测试</p>
+		<p id="p2">html测试</p>
+		<input type="text" id="p3" value="val测试"></input>
+		<button id="btn1">改变</button>
+		
+		<p id="test1">这是有 <b>粗体</b> 字的1。</p>
+		<p id="test2">这是有 <b>粗体</b> 字的2。</p>
+		
+		<button id="btn2">btn1</button>
+		<button id="btn3">btn2</button>
+		
+		<br />
+		<p>设置属性 - attr() ,Query attr() 方法也用于设置/改变属性值。</p>
+		<a id="aa" href="www.baidu.com">百度</a>
+		<button id="btn4">attr属性</button>
+		<button id="btn5">attr回调</button>
+	</body>
+</html>

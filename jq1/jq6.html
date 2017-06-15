@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Jquery Callback 和 链(Chaining)</title>
+		<script type="text/javascript" src="../css/jquery-1.8.3.js" ></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#btn1").click(function(){
+					/*$(".p1").hide(2000,function(){
+						alert("效果完成后执行的方法");
+					});*/
+					$(".p1").hide(2000,show);
+				});
+			});
+			
+			function show(){
+				alert("效果完成后执行的方法");
+			}
+			
+			
+			//链(Chaining)
+			$(function(){
+				$("#btn2").click(function() {
+					$(".p2").css("color","red")
+					.slideUp(2000)
+					.slideDown(2000);
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<p>Callback是在效果完成后执行</p>
+		<button id="btn1">隐藏</button>
+		<p class="p1">我们段落内容，点击“隐藏”按钮我就会消失</p>
+		
+		
+		<p>通过 jQuery，可以把动作/方法链接在一起。<br />
+		Chaining 允许我们在一条语句中运行多个 jQuery 方法（在相同的元素上）。</p>
+		
+		<button id="btn2">链</button>
+		<p class="p2">JQuery</p>
+		
+	</body>
+</html>

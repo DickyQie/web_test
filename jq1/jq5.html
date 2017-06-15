@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Jquery效果--动画</title>
+		<script type="text/javascript" src="../css/jquery-1.8.3.js"></script>
+		
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#btn1").click(function(){
+					//console.log("ss");
+					
+					//$(".div1").animate({left:'250px'},2000);
+					
+					
+					//添加多个属性
+				/*	$(".div1").animate({
+						left:'250px',
+						opacity:'0.5',
+						width:'150',
+						height:'150'
+					},2000);
+					*/
+					
+					//使用相对值
+					$(".div1").animate("div").animate({
+						left:'216px',
+						height:'+=150px',
+						width:'+=150px'
+					},2000);
+					
+					
+					//使用预定义的值
+					//您甚至可以把属性的动画值设置为 "show"、"hide" 或 "toggle"：
+					//$(".div1").animate({height:'toggle'});
+					
+				});
+			});
+			
+			$(function() {
+				$("#btn2").click(function(){
+					var div=$(".div2");
+					div.animate({height:'300px',opacity:'0.4'},"slow");
+					div.animate({width:'300px',opacity:'0.8'},"slow");
+					div.animate({fontSize:'3em'},"slow");
+					div.animate({height:'66px',opacity:'0.4'},"slow");
+					div.animate({fontSize:'1em',opacity:'1'},"slow");
+					div.animate({width:'66px',opacity:'0.8'},"slow");
+					
+					
+				});
+			});
+			
+			$(function(){
+				$(".div3").click(function() {
+					$(".div4").slideToggle(3000);
+				});
+			});
+			
+			$(function(){
+				$("#btn3").click(function(){
+					$(".div4").stop(true,true);
+					//$(selector).stop(stopAll,goToEnd);
+					//可选的 stopAll 参数规定是否应该清除动画队列。默认是 false，
+					//即仅停止活动的动画，允许任何排入队列的动画向后执行。
+					//可选的 goToEnd 参数规定是否立即完成当前动画。默认是 false。
+				});
+			});
+			
+		</script>
+	</head>
+	<style type="text/css">
+		.div1{
+			width: 66px;
+			height: 66px;
+			background: greenyellow;
+			position: relative;
+		}
+		.div2{
+			width: 66px;
+			height: 66px;
+			background: greenyellow;
+		}
+		.div4,.div3{
+			padding: 5px;
+			text-align: center;
+			background-color: #E5EECC;
+			border: 1px solid #C3C3C3;
+		}
+		.div4{
+			padding: 50px;
+			border-top: none;
+			display: none;
+		}
+	</style>
+	<body>
+		<p>JQuery animate()用于创建自定义动画</p>
+		<p>$(selector).animate({params},speed,callback); params参数必填，CSS的属性</p>
+		<p>speed 参数规定效果的时长。它可以取以下值："slow"、"fast" 或毫秒。<br />
+			第一个是时间，第二个是执行操作完成后的函数名称</p>
+		
+		<button id="btn1">animate</button>
+		<div class="div1"></div>
+		
+		<br />
+		<button id="btn2">animate队列功能</button>
+		<div class="div2">HELLO</div>
+		
+		
+		<button id="btn3">停止动画</button>
+		<div class="div3">下拉</div>
+		<div class="div4">Hello world</div>
+	</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>JQuery捕获(DOM )--获取内容和属性 </title>
+		<script type="text/javascript" src="../css/jquery-1.8.3.js"></script>
+		<script type="text/javascript">
+			
+			$(document).ready(function(){
+				$("#btn1").click(function(){
+					alert("Text:"+$("#p1").text());
+					window.alert("HTML:"+$("#p1").html());
+				});
+			});
+			
+			$(function(){
+				$("#btn2").click(function(){
+					alert("value:"+$("#text1").val());
+				});
+			});
+			
+			
+			$(function(){
+				$("#btn3").click(function(){
+					alert("url:"+$("#zq").attr("href"));
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<p>操jQuery 提供一系列与 DOM 相关的方法，这使访问和操作元素和属性变得很容易。</p>
+		
+		<p id="p1">这是段落<b>粗体</b>文本</p>
+		<button id="btn1">显示文本和HTML</button><br />
+		
+		<p>获取value值</p>
+		<input type="text" value="你好" id="text1" />
+		<button id="btn2">获取val值</button>
+		
+		<p>获取属性--attr()</p>
+		
+		<a href="www.baidu.com" id="zq">百度</a>
+		<button id="btn3">href的值</button>
+	</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Jquery效果--滑动</title>
+		<script type="text/javascript" src="../css/jquery-1.8.3.js" ></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$(".div1").click(function(){
+					$(".div2").slideDown();
+					//$(selector).slideDown(speed,callback);
+					//speed 参数规定效果的时长。它可以取以下值："slow"、"fast" 或毫秒。
+					//第一个是时间，第二个是执行操作完成后的函数名称
+				});
+			});
+			
+			$(function(){
+				$("#btn1").click(function() {
+					$(".div2").slideUp("slow");
+				});
+			});
+			
+			$(document).ready(function(){
+				$("#btn2").click(function(){
+					$(".div2").slideToggle();
+				});
+			});
+			
+		</script>
+	</head>
+	<style type="text/css">
+		div{
+			padding: 5px;
+			text-align: center;
+			background-color: #e5eecc;
+			border: 1px solid #c3c3c3;
+		}
+		div.div2{
+			padding: 50px;
+			border-top: none;
+			display: none;
+		}
+	</style>
+	<body>
+		<p>jQuery 滑动方法可使元素上下滑动。</p>
+		
+		<button id="btn1">关闭下拉</button>
+		<div class="div1">下拉</div>
+		<div class="div2">Hello world</div>
+		
+		
+		<p>一个按钮完成上面的两个操作</p>
+		<button id="btn2">slideToggle</button><br />
+	</body>
+</html>

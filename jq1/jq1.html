@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>JQure语法(两种写法)  JQuery选择器</title>
+	<script src="../css/jquery-1.8.3.js"></script>
+	
+	<script type="text/javascript">
+		//两种写法效果相同
+		/*$(document).ready(function(){
+			$("button").click(function(){
+				$("p").hide();
+			});
+		});*/
+		
+		$(function(){
+			$("button").click(function(){
+				$("p").hide();
+				
+			});
+		});
+		
+		
+		
+		//选择器
+		//1：元素选择器    基于元素名选取元素
+		$("p");//选取界面所有的<p>标签
+		
+		//2：#id选择器
+		$(function(){
+			$("#btn").click(function(){
+				$("#psp").hide();
+			});
+		});
+		
+		
+		//3:类选择器
+		$(function(){
+			$(".btn2").click(function(){
+				$(".sh5").hide();
+			});
+		});
+		
+	</script>
+	</head>
+	<body>
+		<p>JQuery是JS的一个函数库</p>
+		<p>JQuery语法：通过选取HTML元素，并对选取的元素执行某些操作</p>
+		<h2>这是一个标题</h2>
+		<p>段落1</p>
+		<p id="pp">段落2</p>
+		<button>点击</button>
+		
+		<br />
+		
+		<label>选择器</label><br />
+		<input type="button" id="btn" value="Id选择器"></input><br />
+		<span id="psp"> 你好！</span>
+		
+		
+		<p>类选择器</p>
+		<h5 class="sh5">类选择器</h5>
+		<input type="button" class="btn2" value="类选择器">
+			
+	</body>
+</html>

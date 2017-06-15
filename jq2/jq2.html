@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>JQuery获取并设置CSS类</title>
+		<script type="text/javascript" src="../css/jquery-1.8.3.js" ></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#btn1").click(function(){
+					$("h3,h3+p").addClass("a1");
+					$("p+div").addClass("a2");
+					
+					//可以添加多个类
+					//$("h2").addClass("a1 a2")
+				});
+			});
+			
+			$(function(){
+				$("#btn2").click(function(){
+					$("h2,h4").removeClass();
+					$("div").removeClass("divs");
+				});
+			});
+			
+			$(function(){
+				$("#btn3").click(function(){
+					$("span+div").toggleClass("div1");
+				});
+			});
+		</script>
+	</head>
+	<style>
+		.a1{
+			color: red;
+			margin-top:15px;
+		}
+		.a2{
+			font-size: 18px;
+			color: blue;
+			font-family: "微软雅黑";
+		}
+		
+		.h{
+			color: red;
+		}
+		.divs{
+			font-family: "arial black";
+			font-size: 19px;
+			color: green;
+			font-weight: bold;
+		}
+		
+		.div1{
+			color: blueviolet;
+			
+		}
+		
+		
+	</style>
+	<body>
+		<p>通过JQuery对CSS元素进行操作</p>
+		<p>addClass() 方法：添加class属性</p>
+		
+		<h3>标题 1</h1>
+		<p>这是一个段落。</p>
+		<div>这是一些重要的文本!</div>
+		<button id="btn1">addClass</button>
+		
+		<p>removeClass():删除class属性</p>
+		
+		<h2 class="h">标题 1</h2>
+		<h4 class="h">标题 1</h4>
+		<div class="divs">这是一些重要的文本!</div>
+		<button id="btn2">addClass</button>
+		
+		
+		
+		<br />
+		<span>removeClass():删除class属性</span>
+		<div class="div1">这是一些重要的文本!</div>
+		<button id="btn3">toggleClass</button>
+	</body>
+</html>

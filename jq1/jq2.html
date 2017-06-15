@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>JQuery事件</title>
+		
+		<script type="text/javascript" src="../css/jquery-1.8.3.js" ></script>
+		
+		<script>
+			$(document).ready(function(){
+				$("p1").click(function(){
+					
+					$(this).hide();
+				});
+			});
+			
+			$(document).ready(function(){
+				
+				$("button").dblclick(function(){
+					
+					alert("双击事件");
+				});
+				
+			});
+			
+			
+			
+			$(function(){
+				$("#p2").mouseenter(function(){
+					alert("你的鼠标在p2的这个标签上");
+				});
+			});
+			
+			$(document).ready(function(){
+				$("#p3").mouseleave(function(){
+					alert("鼠标离开此元素");
+				});
+			});
+			
+		</script>
+	</head>
+	<body>
+		<p id="p1">事件：页面对不同访问者的响应</p>
+		<!--点击就消失-->
+		<button>你好</button><br />
+		
+		<p id="p2">mouseenter():当鼠标指针穿过元素</p>
+		
+		<p id="p3">mouserleave():当鼠标指针离开元素时</p>
+		
+		
+		
+	</body>
+</html>

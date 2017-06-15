@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Jquery添加元素</title>
+		<script type="text/javascript" src="../css/jquery-1.8.3.js" ></script>
+		<script>
+			$(function(){
+				$("#btn1").click(function(){
+					$("#p1").append("<b>歆语</b>")
+					
+					//可添加多个
+					$("ol").append("<li>第三项哦</li>","<li>第n项</li>")
+				});
+			});
+			$(function(){
+				$("#btn2").click(function(){
+					$("#p1").prepend("<b>开头</b>")
+					
+					//可添加多个
+					$("ol").prepend("<li>第三项哦</li>","<li>第n项</li>")
+				});
+			});
+			
+			
+			$(function(){
+				$("#btn3").click(function(){
+					$("img").after("谁说的");
+				});
+			});
+			$(function(){
+				$("#btn4").click(function(){
+					$("img").before("before","<strong>同上添加多个<strong>");
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<p>append：尾部添加  和prepend：开头添加</p>
+		<p id="p1">第一个</p>
+		<ol>
+			<li>List1</li>
+			<li>List2</li>
+		</ol>
+		<button id="btn1">尾部添加(append)</button>
+		<button id="btn2">开头添加(prepend)</button>
+		
+		
+		<br />
+		<p>after()：被选元素之后添加  before()被选元素之前添加</p>
+		<img src="../img/logo.jpg"/><br />
+		<button id="btn3">尾部添加(after)</button>
+		<button id="btn4">开头添加(before)</button>
+		
+	</body>
+</html>
